@@ -13,22 +13,54 @@ echo "Loading dotfiles from repository..."
 echo "Repository directory: $REPO_DIR"
 
 # List of dotfiles to manage
+# Format: "destination_path:source_path_in_repo"
+# If no colon is present, it uses the same path relative to HOME and REPO_DIR
 DOTFILES=(
   ".zshrc"
   ".tmux.conf"
   ".vimrc"
   ".gitconfig"
   ".gitignore_global"
+  ".config/ghostty/config:ghostty-config"
 )
 
-# Copy each dotfile from repository to home directory
-for dotfile in "${DOTFILES[@]}"; do
-  if [ -f "$REPO_DIR/$dotfile" ]; then
-    echo "Loading $dotfile to $HOME/$dotfile"
-    cp "$REPO_DIR/$dotfile" "$HOME/$dotfile"
+# Function to get source and destination paths
+get_paths() {
+  local entry="$1"
+  if [[ "$entry" == *":"* ]]; then
+    # Split on colon
+    local dest_path="${entry%:*}"
+    local source_path="${entry#*:}"
   else
-    echo "Warning: $REPO_DIR/$dotfile does not exist in repository, skipping..."
+    # Use same path for both
+    local dest_path="$entry"
+    local source_path="$entry"
+  fi
+  
+  # Default to HOME if destination doesn't start with /
+  if [[ "$dest_path" != /* ]]; then
+    dest_path="$HOME/$dest_path"
+  fi
+  
+  echo "$REPO_DIR/$source_path:$dest_path"
+}
+
+# Copy each dotfile from repository to destination
+for dotfile_entry in "${DOTFILES[@]}"; do
+  paths=$(get_paths "$dotfile_entry")
+  source_path="${paths%:*}"
+  dest_path="${paths#*:}"
+  
+  if [ -f "$source_path" ]; then
+    # Create destination directory if it doesn't exist
+    dest_dir="$(dirname "$dest_path")"
+    mkdir -p "$dest_dir"
+    
+    echo "Loading $source_path to $dest_path"
+    cp "$source_path" "$dest_path"
+  else
+    echo "Warning: $source_path does not exist in repository, skipping..."
   fi
 done
 
-echo "Done! Dotfiles have been loaded to your home directory."
+echo "Done! Dotfiles have been loaded to your destination directories."

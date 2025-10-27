@@ -1,0 +1,37 @@
+font-family = "Maple Mono NF CN"
+font-size = 16
+font-feature = "+liga"
+font-feature = "+calt"
+
+background-opacity = 0.8
+background-opacity-cells = true
+theme = light: TokyoNight Day, dark: TokyoNight Storm
+
+initial-command = "/opt/homebrew/bin/tmux new-session -A -s main"
+
+bell-features = system, audio, attention, title, no-border
+
+macos-titlebar-style = transparent
+
+shell-integration-features = true
+
+scrollback-limit = 50000
+
+confirm-close-surface = false
+quit-after-last-window-closed = false
+
+clipboard-read = allow
+clipboard-write = allow
+clipboard-paste-protection = true
+
+macos-icon = official
+
+macos-option-as-alt = left
+
+auto-update = download
+
+resize-overlay = always
+
+link-previews = true
+
+title = "󰊠"
