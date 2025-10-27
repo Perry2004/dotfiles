@@ -1,0 +1,25 @@
+[core]
+	editor = nvim
+	preloadindex = true
+	excludesfile = ~/.gitignore_global
+	autocrlf = false
+[merge]
+	tool = nvimdiff
+[mergetool "nvimdiff"]
+  layout = "LOCAL,BASE,REMOTE / MERGED"
+[pull]
+	rebase = true
+[push]
+	default = simple
+	autoSetupRemote = true
+[pack]
+	threads = 0
+[credential "https://github.com"]
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[user]
+	name = Perry Zhu
+	email = perryzhu2004@outlook.com
+[fetch]
+	prune = true
