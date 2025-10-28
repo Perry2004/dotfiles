@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -145,7 +145,7 @@ export plai
 alias lg='lazygit'
 
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(~/.docker/completions $fpath)
+fpath=(Users/perryzhu/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
@@ -176,3 +176,8 @@ unset __conda_setup
 
 # yarn path
 export PATH="~/.yarn/bin:$PATH"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/perryzhu/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
