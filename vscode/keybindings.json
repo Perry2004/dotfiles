@@ -138,6 +138,27 @@
             ]
         }
     },
+    // Navigate between sidebar views
+    {
+        "key": "shift+h",
+        "command": "workbench.action.previousSideBarView",
+        "when": "sideBarFocus"
+    },
+    {
+        "key": "shift+l",
+        "command": "workbench.action.nextSideBarView",
+        "when": "sideBarFocus"
+    },
+    {
+        "key": "shift+h",
+        "command": "workbench.action.previousAuxiliaryBarView",
+        "when": "auxiliaryBarFocus"
+    },
+    {
+        "key": "shift+l",
+        "command": "workbench.action.nextAuxiliaryBarView",
+        "when": "auxiliaryBarFocus"
+    },
     // Window resize with Ctrl+Alt (repeatable when held)
     {
         "key": "ctrl+alt+=",
