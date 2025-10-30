@@ -1,17 +1,20 @@
 {
     "github.copilot.nextEditSuggestions.enabled": true,
     "window.zoomLevel": 1,
-    "workbench.colorTheme": "Tokyo Night nv",
+    "workbench.preferredDarkColorTheme": "Tokyo Night nv",
     "workbench.preferredLightColorTheme": "Tokyo Night Light",
+    "workbench.iconTheme": "catppuccin-latte",
     "icontheme.darkIconTheme": "catppuccin-mocha",
     "icontheme.lightIconTheme": "catppuccin-latte",
-    "workbench.iconTheme": "catppuccin-mocha",
     "workbench.activityBar.location": "top",
+    "window.commandCenter": false,
     "editor.accessibilitySupport": "off",
     "editor.fontFamily": "Maple Mono NF CN, monospace",
     "vim.useSystemClipboard": true,
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
     "window.autoDetectColorScheme": true,
-    "workbench.preferredDarkColorTheme": "Tokyo Night nv",
     "vim.camelCaseMotion.enable": true,
     "vim.highlightedyank.enable": true,
     "vim.leader": " ",
