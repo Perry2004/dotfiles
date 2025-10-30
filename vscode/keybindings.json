@@ -201,7 +201,12 @@
         "command": "workbench.action.navigateRight",
         "when": "vim.active && vim.mode != 'Insert'"
     },
-    // Vim-style go to commands
+    // fix vim gg
+    {
+        "key": "g g",
+        "command": "cursorTop",
+        "when": "editorFocus && vim.active && vim.mode == 'Normal'"
+    },
     {
         "key": "g d",
         "command": "editor.action.revealDefinition",
