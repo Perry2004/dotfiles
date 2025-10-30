@@ -22,10 +22,10 @@ DOTFILES=(
   ".gitconfig"
   ".gitignore_global"
   ".config/ghostty/config:ghostty-config"
-  "${HOME}/Library/Application Support/Code/User/profiles/2b80b728/settings.json:vscode/settings.json"
-  "${HOME}/Library/Application Support/Code/User/profiles/2b80b728/keybindings.json:vscode/keybindings.json"
-  "${HOME}/Library/Application Support/Code/User/profiles/2b80b728/mcp.json:vscode/mcp.json"
-  "${HOME}/Library/Application Support/Code/User/profiles/2b80b728/snippets:vscode/snippets"
+  "${HOME}/Library/Application Support/Code/User/settings.json:vscode/settings.json"
+  "${HOME}/Library/Application Support/Code/User/keybindings.json:vscode/keybindings.json"
+  "${HOME}/Library/Application Support/Code/User/mcp.json:vscode/mcp.json"
+  "${HOME}/Library/Application Support/Code/User/snippets:vscode/snippets"
 )
 
 # Function to get source and destination paths
@@ -40,12 +40,12 @@ get_paths() {
     local source_path="$entry"
     local dest_path="$entry"
   fi
-  
+
   # Default to HOME if source doesn't start with /
   if [[ "$source_path" != /* ]]; then
     source_path="$HOME/$source_path"
   fi
-  
+
   echo "$source_path:$REPO_DIR/$dest_path"
 }
 
@@ -54,7 +54,7 @@ for dotfile_entry in "${DOTFILES[@]}"; do
   paths=$(get_paths "$dotfile_entry")
   source_path="${paths%:*}"
   dest_path="${paths#*:}"
-  
+
   if [ -f "$source_path" ] || [ -d "$source_path" ]; then
     # Create destination directory if it doesn't exist
     dest_dir="$(dirname "$dest_path")"
