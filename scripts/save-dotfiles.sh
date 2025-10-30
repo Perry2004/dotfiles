@@ -17,11 +17,15 @@ echo "Repository directory: $REPO_DIR"
 # If no colon is present, it uses the same path relative to HOME and REPO_DIR
 DOTFILES=(
   ".zshrc"
-  ".tmux.conf" 
+  ".tmux.conf"
   ".vimrc"
   ".gitconfig"
   ".gitignore_global"
   ".config/ghostty/config:ghostty-config"
+  "${HOME}/Library/Application Support/Code/User/profiles/2b80b728/settings.json:vscode/settings.json"
+  "${HOME}/Library/Application Support/Code/User/profiles/2b80b728/keybindings.json:vscode/keybindings.json"
+  "${HOME}/Library/Application Support/Code/User/profiles/2b80b728/mcp.json:vscode/mcp.json"
+  "${HOME}/Library/Application Support/Code/User/profiles/2b80b728/snippets:vscode/snippets"
 )
 
 # Function to get source and destination paths
@@ -51,13 +55,13 @@ for dotfile_entry in "${DOTFILES[@]}"; do
   source_path="${paths%:*}"
   dest_path="${paths#*:}"
   
-  if [ -f "$source_path" ]; then
+  if [ -f "$source_path" ] || [ -d "$source_path" ]; then
     # Create destination directory if it doesn't exist
     dest_dir="$(dirname "$dest_path")"
     mkdir -p "$dest_dir"
-    
+
     echo "Copying $source_path to $dest_path"
-    cp "$source_path" "$dest_path"
+    cp -r "$source_path" "$dest_path"
   else
     echo "Warning: $source_path does not exist, skipping..."
   fi
