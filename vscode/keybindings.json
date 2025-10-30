@@ -37,11 +37,6 @@
     },
     {
         "key": "shift+cmd+0",
-        "command": "workbench.action.terminal.focusNextPane",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+shift+cmd+0",
         "command": "runCommands",
         "args": {
             "commands": [
