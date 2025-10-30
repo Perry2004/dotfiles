@@ -13,5 +13,6 @@
         "asvetliakov.vscode-neovim": 1
     },
     "editor.accessibilitySupport": "off",
-    "editor.fontFamily": "Maple Mono NF CN, monospace"
+    "editor.fontFamily": "Maple Mono NF CN, monospace",
+    "vim.useSystemClipboard": true
 }
