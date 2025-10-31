@@ -3,14 +3,13 @@
     "window.zoomLevel": 1,
     "workbench.preferredDarkColorTheme": "Tokyo Night nv",
     "workbench.preferredLightColorTheme": "Tokyo Night Light",
-    "workbench.iconTheme": "catppuccin-latte",
+    "workbench.iconTheme": "catppuccin-mocha",
     "icontheme.darkIconTheme": "catppuccin-mocha",
     "icontheme.lightIconTheme": "catppuccin-latte",
     "workbench.activityBar.location": "top",
-    "window.commandCenter": false,
     "editor.accessibilitySupport": "off",
     "editor.fontFamily": "Maple Mono NF CN, monospace",
-    "vim.useSystemClipboard": true,
+    "vim.useSystemClipboard": false,
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
     },
@@ -422,4 +421,10 @@
         "manuthebyte.dynamic-icon-theme",
         "kisstkondoros.vscode-gutter-preview"
     ],
+    "[csv]": {
+        "editor.inlayHints.maximumLength": 0
+    },
+    "terminal.integrated.scrollback": 20000,
+    "terminal.integrated.persistentSessionScrollback": 500,
+    "terminal.integrated.tabs.enabled": false,
 }
