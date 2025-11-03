@@ -3,13 +3,13 @@
     "window.zoomLevel": 1,
     "workbench.preferredDarkColorTheme": "Tokyo Night nv",
     "workbench.preferredLightColorTheme": "Tokyo Night Light",
-    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.iconTheme": "catppuccin-latte",
     "icontheme.darkIconTheme": "catppuccin-mocha",
     "icontheme.lightIconTheme": "catppuccin-latte",
     "workbench.activityBar.location": "top",
     "editor.accessibilitySupport": "off",
     "editor.fontFamily": "Maple Mono NF CN, monospace",
-    "vim.useSystemClipboard": false,
+    "vim.useSystemClipboard": true,
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
     },
@@ -427,4 +427,11 @@
     "terminal.integrated.scrollback": 20000,
     "terminal.integrated.persistentSessionScrollback": 500,
     "terminal.integrated.tabs.enabled": false,
+    "git.blame.editorDecoration.enabled": false,
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.includeAliasesFromUserFiles": true,
+    "python.analysis.importFormat": "relative",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "git.autofetch": true,
 }
