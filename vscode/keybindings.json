@@ -137,22 +137,22 @@
     {
         "key": "shift+h",
         "command": "workbench.action.previousSideBarView",
-        "when": "sideBarFocus"
+        "when": "sideBarFocus && !inputFocus"
     },
     {
         "key": "shift+l",
         "command": "workbench.action.nextSideBarView",
-        "when": "sideBarFocus"
+        "when": "sideBarFocus && !inputFocus"
     },
     {
         "key": "shift+h",
         "command": "workbench.action.previousAuxiliaryBarView",
-        "when": "auxiliaryBarFocus"
+        "when": "auxiliaryBarFocus && !inputFocus"
     },
     {
         "key": "shift+l",
         "command": "workbench.action.nextAuxiliaryBarView",
-        "when": "auxiliaryBarFocus"
+        "when": "auxiliaryBarFocus && !inputFocus"
     },
     // Window resize with Ctrl+Alt (repeatable when held)
     {
