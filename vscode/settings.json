@@ -18,6 +18,7 @@
     "vim.highlightedyank.enable": true,
     "vim.leader": " ",
     "vim.showMarksInGutter": true,
+    "vim.smartRelativeLine": true,
     // Lazyvim style keybindings
     "vim.normalModeKeyBindingsNonRecursive": [
         {
@@ -455,4 +456,5 @@
     "python.analysis.importFormat": "relative",
     "terminal.integrated.defaultProfile.osx": "zsh",
     "git.autofetch": true,
+    "editor.lineNumbers": "relative",
 }
