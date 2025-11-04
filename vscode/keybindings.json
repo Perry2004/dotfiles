@@ -422,7 +422,8 @@
     {
         "key": "shift+cmd+i",
         "command": "notebook.cell.chat.start",
-        "when": "config.notebook.experimental.cellChat && notebookChatAgentRegistered && notebookEditable && notebookEditorFocused && !inputFocus || config.notebook.experimental.generate && notebookChatAgentRegistered && notebookEditable && notebookEditorFocused && !inputFocus"
+        "when": "config.notebook.experimental.cellChat && notebookChatAgentRegistered && notebookEditable && notebookEditorFocused && !inputFocus || config.notebook.experimental.generate && notebookChatAgentRegistered && notebookEditable && notebookEditorFocused && !inputFocus",
+        "args": {"index": 0}
     },
     {
         "key": "cmd+i",
@@ -483,5 +484,10 @@
         "key": "cmd+up",
         "command": "-workbench.action.terminal.scrollToPreviousCommand",
         "when": "terminalFocus && terminalHasBeenCreated && !accessibilityModeEnabled || terminalFocus && terminalProcessSupported && !accessibilityModeEnabled"
-    }
+    },
+    {
+        "key": "alt+p",
+        "command": "workbench.action.quickOpen",
+        "args": "%"
+         }
 ]

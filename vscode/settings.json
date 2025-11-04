@@ -315,7 +315,10 @@
                 "/"
             ],
             "commands": [
-                "workbench.action.findInFiles"
+                {
+                    "command": "workbench.action.quickOpen",
+                    "args": "%"
+                }
             ]
         },
         {
