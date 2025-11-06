@@ -404,6 +404,16 @@
     "when": "suggestWidgetVisible && textInputFocus"
   },
   {
+    "key": "ctrl+n",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetVisible && textInputFocus"
+  },
+  {
     "key": "cmd+up",
     "command": "workbench.action.terminal.scrollUp",
     "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
@@ -447,5 +457,10 @@
     "key": "alt+p",
     "command": "workbench.action.quickOpen",
     "args": "%"
+  },
+  {
+    "key": "escape",
+    "command": "extension.vim_escape",
+    "when": "editorTextFocus && !inDebugRepl"
   }
 ]
