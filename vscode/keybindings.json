@@ -404,6 +404,42 @@
     "when": "suggestWidgetVisible && textInputFocus"
   },
   {
+    "key": "shift+k",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+  // Scroll hover panel
+  {
+    "key": "ctrl+n",
+    "command": "editor.action.scrollDownHover",
+    "when": "editorHoverVisible && !suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "editor.action.scrollUpHover",
+    "when": "editorHoverVisible && !suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "editor.action.scrollDownHover",
+    "when": "editorHoverVisible && !suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "editor.action.scrollUpHover",
+    "when": "editorHoverVisible && !suggestWidgetVisible"
+  },
+  {
+    "key": "j",
+    "command": "editor.action.scrollDownHover",
+    "when": "editorHoverVisible && !suggestWidgetVisible"
+  },
+  {
+    "key": "k",
+    "command": "editor.action.scrollUpHover",
+    "when": "editorHoverVisible && !suggestWidgetVisible"
+  },
+  {
     "key": "ctrl+n",
     "command": "selectNextSuggestion",
     "when": "suggestWidgetVisible && textInputFocus"
