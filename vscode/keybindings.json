@@ -538,5 +538,15 @@
     "key": "escape",
     "command": "closeQuickDiff",
     "when": "dirtyDiffVisible"
+  },
+  {
+    "key": "escape",
+    "command": "flash-vscode.exit",
+    "when": "flash-vscode.active"
+  },
+  {
+    "key": "escape",
+    "command": "closeMarkersNavigation",
+    "when": "markersNavigationVisible && vim.mode == 'Normal'"
   }
 ]

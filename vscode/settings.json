@@ -189,6 +189,16 @@
       "commands": ["editor.action.goToReferences"]
     },
     {
+      "before": ["g", "b"],
+      "commands": ["workbench.action.navigateBack"],
+      "when": "canNavigateBack"
+    },
+    {
+      "before": ["g", "f"],
+      "commands": ["workbench.action.navigateForward"],
+      "when": "canNavigateForward"
+    },
+    {
       "before": ["s"],
       "commands": ["flash-vscode.start"]
     },
@@ -199,11 +209,6 @@
     {
       "before": ["<BS>"],
       "commands": ["flash-vscode.backspace"]
-    },
-    {
-      "before": ["<Esc>"],
-      "commands": ["flash-vscode.exit"],
-      "when": "flash-vscode.active"
     },
     {
       "before": ["<leader>", "g", "n"],
@@ -228,11 +233,6 @@
     {
       "before": ["<leader>", "x", "p"],
       "commands": ["editor.action.marker.prevInFiles"]
-    },
-    {
-      "before": ["<Esc>"],
-      "commands": ["closeMarkersNavigation"],
-      "when": "markersNavigationVisible"
     }
   ],
   "editor.formatOnSave": true,
@@ -340,5 +340,8 @@
   "python.analysis.typeEvaluation.enableReachabilityAnalysis": true,
   "python.analysis.typeEvaluation.strictDictionaryInference": true,
   "python.analysis.typeEvaluation.strictListInference": true,
-  "python.analysis.typeEvaluation.strictSetInference": true
+  "python.analysis.typeEvaluation.strictSetInference": true,
+  "zenMode.silentNotifications": false,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideStatusBar": false
 }
