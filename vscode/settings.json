@@ -204,6 +204,22 @@
       "before": ["<Esc>"],
       "commands": ["flash-vscode.exit"],
       "when": "flash-vscode.active"
+    },
+    {
+      "before": ["<leader>", "g", "n"],
+      "commands": ["editor.action.dirtydiff.next"]
+    },
+    {
+      "before": ["<leader>", "g", "p"],
+      "commands": ["editor.action.dirtydiff.previous"]
+    },
+    {
+      "before": ["<leader>", "g", "d"],
+      "commands": ["git.revertSelectedRanges"]
+    },
+    {
+      "before": ["<leader>", "g", "s"],
+      "commands": ["git.stageSelectedRanges"]
     }
   ],
   "editor.formatOnSave": true,
