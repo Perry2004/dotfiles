@@ -421,7 +421,7 @@
   {
     "key": "shift+k",
     "command": "editor.action.showHover",
-    "when": "editorTextFocus"
+    "when": "editorTextFocus && vim.mode == 'Normal'"
   },
   // Scroll hover panel
   {
