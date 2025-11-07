@@ -41,9 +41,14 @@
     "args": {
       "commands": [
         "workbench.action.toggleMaximizedPanel",
-        "workbench.action.terminal.focus"
+        // "workbench.action.terminal.focus"
+        "workbench.action.focusPanel"
       ]
     }
+  },
+  {
+    "key": "alt+0",
+    "command": "workbench.action.tasks.toggleProblems"
   },
   // editor tabs
   {
@@ -190,7 +195,7 @@
     "command": "workbench.action.navigateRight",
     "when": "vim.active && vim.mode != 'Insert'"
   },
-  // File Explorer toggle with <leader>e
+  // File Explorer toggle
   {
     "key": "cmd+e",
     "command": "workbench.action.closeSidebar",
@@ -230,6 +235,16 @@
   {
     "key": "d",
     "command": "deleteFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "p",
+    "command": "previousCompressedFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "n",
+    "command": "nextCompressedFolder",
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
   // Leader-based search commands (using Ctrl+F as prefix)
@@ -498,5 +513,20 @@
     "key": "escape",
     "command": "extension.vim_escape",
     "when": "editorTextFocus && !inDebugRepl"
+  },
+  {
+    "key": "escape",
+    "command": "hideSuggestWidget",
+    "when": "vim.active && vim.mode == 'Normal' && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "tab",
+    "command": "togglePeekWidgetFocus",
+    "when": "referenceSearchVisible && inReferenceSearchEditor && vim.active && vim.mode != 'Insert' || referenceSearchVisible  && !inReferenceSearchEditor"
+  },
+  {
+    "key": "ctrl+=",
+    "command": "workbench.action.navigateForward",
+    "when": "canNavigateForward"
   }
 ]

@@ -190,11 +190,20 @@
     },
     {
       "before": ["s"],
-      "commands": ["leap.findForward"]
+      "commands": ["flash-vscode.start"]
     },
     {
       "before": ["S"],
-      "commands": ["leap.findBackward"]
+      "commands": ["flash-vscode.startSelection"]
+    },
+    {
+      "before": ["<BS>"],
+      "commands": ["flash-vscode.backspace"]
+    },
+    {
+      "before": ["<Esc>"],
+      "commands": ["flash-vscode.exit"],
+      "when": "flash-vscode.active"
     }
   ],
   "editor.formatOnSave": true,
