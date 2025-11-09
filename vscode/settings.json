@@ -3,7 +3,7 @@
   "window.zoomLevel": 1,
   "workbench.preferredDarkColorTheme": "Tokyo Night nv",
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
-  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.iconTheme": "catppuccin-mocha",
   "icontheme.darkIconTheme": "catppuccin-mocha",
   "icontheme.lightIconTheme": "catppuccin-latte",
   "workbench.activityBar.location": "top",
@@ -343,5 +343,8 @@
   "python.analysis.typeEvaluation.strictSetInference": true,
   "zenMode.silentNotifications": false,
   "zenMode.hideLineNumbers": false,
-  "zenMode.hideStatusBar": false
+  "zenMode.hideStatusBar": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

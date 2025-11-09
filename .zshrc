@@ -141,8 +141,9 @@ export books
 export notes
 export plai
 
-# aliases 
+# aliases
 alias lg='lazygit'
+alias gcln='gitclean'
 
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(Users/perryzhu/.docker/completions $fpath)
@@ -175,9 +176,18 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # yarn path
-export PATH="~/.yarn/bin:$PATH"
+export PATH="${HOME}/.yarn/bin:$PATH"
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/perryzhu/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+
+
+# pnpm
+export PNPM_HOME="${HOME}/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
