@@ -4,9 +4,9 @@
 	excludesfile = ~/.gitignore_global
 	autocrlf = false
 [merge]
-	tool = nvimdiff
-[mergetool "nvimdiff"]
-  layout = "LOCAL,BASE,REMOTE / MERGED"
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
 [pull]
 	rebase = true
 [push]
