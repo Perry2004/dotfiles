@@ -548,5 +548,10 @@
     "key": "escape",
     "command": "closeMarkersNavigation",
     "when": "markersNavigationVisible && vim.mode == 'Normal'"
+  },
+  {
+    "key": "tab",
+    "command": "editor.action.inlineSuggest.commit",
+    "when": "editorTextFocus && vim.mode == 'Normal' && inlineSuggestionVisible"
   }
 ]
