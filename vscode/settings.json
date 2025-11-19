@@ -3,7 +3,7 @@
   "window.zoomLevel": 1,
   "workbench.preferredDarkColorTheme": "Tokyo Night nv",
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
-  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.iconTheme": "catppuccin-mocha",
   "icontheme.darkIconTheme": "catppuccin-mocha",
   "icontheme.lightIconTheme": "catppuccin-latte",
   "workbench.activityBar.location": "top",
@@ -369,5 +369,11 @@
   "[tsv]": {
     "editor.inlayHints.maximumLength": 0
   },
-  "java.inlayHints.parameterTypes.enabled": true
+  "java.inlayHints.parameterTypes.enabled": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vs-kubernetes": {
+    "vs-kubernetes.crd-code-completion": "enabled"
+  }
 }
