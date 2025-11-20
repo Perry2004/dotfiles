@@ -376,5 +376,9 @@
   "workbench.preferredDarkColorTheme": "Tokyo Night Storm Frameless",
   "editor.minimap.autohide": "mouseover",
   "chat.mcp.gallery.enabled": true,
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "vscode_custom_css.imports": [
+    "file://${env:HOME}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+  ],
+  "editor.cursorSmoothCaretAnimation": "explicit"
 }
