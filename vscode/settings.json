@@ -1,6 +1,5 @@
 {
   "github.copilot.nextEditSuggestions.enabled": true,
-  "window.zoomLevel": 1,
   "workbench.preferredLightColorTheme": "Tokyo Night Light Frameless",
   "workbench.iconTheme": "catppuccin-mocha",
   "icontheme.darkIconTheme": "catppuccin-mocha",
@@ -375,5 +374,7 @@
     "vs-kubernetes.crd-code-completion": "enabled"
   },
   "workbench.preferredDarkColorTheme": "Tokyo Night Storm Frameless",
-  "editor.minimap.autohide": "mouseover"
+  "editor.minimap.autohide": "mouseover",
+  "chat.mcp.gallery.enabled": true,
+  "window.zoomLevel": 1
 }
