@@ -1,7 +1,6 @@
 {
   "github.copilot.nextEditSuggestions.enabled": true,
   "window.zoomLevel": 1,
-  "workbench.preferredDarkColorTheme": "Tokyo Night nv",
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
   "workbench.iconTheme": "catppuccin-mocha",
   "icontheme.darkIconTheme": "catppuccin-mocha",
@@ -253,7 +252,6 @@
   "powermode.shake.enabled": false,
   "powermode.combo.location": "off",
   "redhat.telemetry.enabled": true,
-  "editor.minimap.autohide": "mouseover",
   "java.inlayHints.parameterNames.enabled": "all",
   "java.inlayHints.variableTypes.enabled": true,
   "python.analysis.inlayHints.callArgumentNames": "all",
@@ -331,7 +329,7 @@
   },
   "window.commandCenter": false,
   "[python]": {
-    "diffEditor.ignoreTrimWhitespace": true
+    "diffEditor.ignoreTrimWhitespace": false
   },
   "security.workspace.trust.untrustedFiles": "open",
   "python.analysis.typeCheckingMode": "standard",
@@ -375,5 +373,7 @@
   },
   "vs-kubernetes": {
     "vs-kubernetes.crd-code-completion": "enabled"
-  }
+  },
+  "workbench.preferredDarkColorTheme": "Tokyo Night nv",
+  "editor.minimap.autohide": "mouseover"
 }
