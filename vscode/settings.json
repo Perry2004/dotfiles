@@ -1,7 +1,7 @@
 {
   "github.copilot.nextEditSuggestions.enabled": true,
   "workbench.preferredLightColorTheme": "Tokyo Night Light Frameless",
-  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.iconTheme": "catppuccin-latte",
   "icontheme.darkIconTheme": "catppuccin-mocha",
   "icontheme.lightIconTheme": "catppuccin-latte",
   "workbench.activityBar.location": "top",
@@ -376,8 +376,5 @@
   "workbench.preferredDarkColorTheme": "Tokyo Night Storm Frameless",
   "editor.minimap.autohide": "mouseover",
   "chat.mcp.gallery.enabled": true,
-  "window.zoomLevel": 1,
-  "vscode_custom_css.imports": [
-    "file://${env:HOME}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
-  ]
+  "window.zoomLevel": 1
 }
