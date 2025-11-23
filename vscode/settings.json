@@ -1,7 +1,7 @@
 {
   "github.copilot.nextEditSuggestions.enabled": true,
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
-  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.iconTheme": "catppuccin-latte",
   "icontheme.darkIconTheme": "catppuccin-mocha",
   "icontheme.lightIconTheme": "catppuccin-latte",
   "workbench.activityBar.location": "top",
@@ -387,11 +387,12 @@
     "images": [
       "file:///Users/perryzhu/Library/Mobile Documents/com~apple~CloudDocs/Appendix/WallPaper/天依-伞.png"
     ],
-    "opacity": 0.1,
+    "opacity": 0.15,
     "size": "cover",
     "position": "center",
     "interval": 0,
     "random": false
   },
-  "settingsSync.ignoredSettings": ["background.fullscreen"]
+  "settingsSync.ignoredSettings": ["background.fullscreen"],
+  "background.enabled": true
 }
