@@ -382,5 +382,16 @@
     "[Tokyo Night Storm]": {
       "editorGutter.modifiedBackground": "#66ccff"
     }
-  }
+  },
+  "background.fullscreen": {
+    "images": [
+      "file:///Users/perryzhu/Library/Mobile Documents/com~apple~CloudDocs/Appendix/WallPaper/天依-伞.png"
+    ],
+    "opacity": 0.1,
+    "size": "cover",
+    "position": "center",
+    "interval": 0,
+    "random": false
+  },
+  "settingsSync.ignoredSettings": ["background.fullscreen"]
 }
