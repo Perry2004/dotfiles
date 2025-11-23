@@ -376,5 +376,11 @@
   "workbench.preferredDarkColorTheme": "Tokyo Night Storm",
   "editor.minimap.autohide": "mouseover",
   "chat.mcp.gallery.enabled": true,
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "git.confirmSync": false,
+  "workbench.colorCustomizations": {
+    "[Tokyo Night Storm]": {
+      "editorGutter.modifiedBackground": "#66ccff"
+    }
+  }
 }
