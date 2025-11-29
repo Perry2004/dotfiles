@@ -28,6 +28,7 @@ DOTFILES=(
   "${HOME}/Library/Application Support/Code/User/snippets:vscode/snippets"
   ".config/iterm2/com.googlecode.iterm2.plist:iterm2/com.googlecode.iterm2.plist"
   ".yabairc"
+  ".skhdrc"
 )
 
 # Function to get source and destination paths
