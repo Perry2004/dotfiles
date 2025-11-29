@@ -27,6 +27,7 @@ DOTFILES=(
   "${HOME}/Library/Application Support/Code/User/mcp.json:vscode/mcp.json"
   "${HOME}/Library/Application Support/Code/User/snippets:vscode/snippets"
   ".config/iterm2/com.googlecode.iterm2.plist:iterm2/com.googlecode.iterm2.plist"
+  ".yabairc"
 )
 
 # Function to get source and destination paths
