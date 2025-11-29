@@ -3,7 +3,7 @@ font-size = 15
 font-feature = "+liga"
 font-feature = "+calt"
 
-background-opacity = 0.75
+background-opacity = 1
 background-opacity-cells = true
 theme = light: TokyoNight Day, dark: TokyoNight Storm
 

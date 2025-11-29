@@ -1,7 +1,7 @@
 {
   "github.copilot.nextEditSuggestions.enabled": true,
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
-  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.iconTheme": "catppuccin-mocha",
   "icontheme.darkIconTheme": "catppuccin-mocha",
   "icontheme.lightIconTheme": "catppuccin-latte",
   "workbench.activityBar.location": "top",
@@ -245,7 +245,7 @@
   "editor.renderWhitespace": "boundary",
   "editor.trimWhitespaceOnDelete": true,
   "files.trimTrailingWhitespace": true,
-  "gitlens.ai.model": "vscode",
+  "gitlens.ai.model": "gitkraken",
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
   "powermode.enabled": true,
   "powermode.shake.enabled": false,
@@ -383,16 +383,7 @@
       "editorGutter.modifiedBackground": "#66ccff"
     }
   },
-  "background.fullscreen": {
-    "images": [
-      "file:///Users/perryzhu/Library/Mobile Documents/com~apple~CloudDocs/Appendix/WallPaper/天依-伞.png"
-    ],
-    "opacity": 0.1,
-    "size": "cover",
-    "position": "center",
-    "interval": 0,
-    "random": false
-  },
-  "settingsSync.ignoredSettings": ["background.fullscreen"],
-  "background.enabled": true
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
