@@ -8,4 +8,4 @@ yabai -m config window_shadow float
 yabai -m config normal_window_opacity 0.8
 yabai -m config window_opacity_duration 0.1
 
-yabai -m config auto_balance false
+yabai -m config auto_balance off
