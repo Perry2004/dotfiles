@@ -67,8 +67,8 @@ alt - 4 : yabai -m space --focus 4
 alt - 5 : yabai -m space --focus 5
 
 # Focus Next / Previous Space
-alt - n : yabai -m space --focus next
-alt - p : yabai -m space --focus prev
+ctrl + alt - n : yabai -m space --focus next
+ctrl + alt - p : yabai -m space --focus prev
 
 # Focus Recent Space (Toggle back to last used)
 alt - 0 : yabai -m space --focus recent
