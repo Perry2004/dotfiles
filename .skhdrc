@@ -71,7 +71,7 @@ ctrl + alt - n : yabai -m space --focus next
 ctrl + alt - p : yabai -m space --focus prev
 
 # Focus Recent Space (Toggle back to last used)
-alt - tab : yabai -m space --focus recent
+ctrl + alt - tab : yabai -m space --focus recent
 
 # Move Window to Space
 shift + alt - 1 : yabai -m window --space 1
