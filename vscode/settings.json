@@ -4,7 +4,6 @@
   "workbench.iconTheme": "catppuccin-mocha",
   "icontheme.darkIconTheme": "catppuccin-mocha",
   "icontheme.lightIconTheme": "catppuccin-latte",
-  "workbench.activityBar.location": "top",
   "editor.accessibilitySupport": "off",
   "editor.fontFamily": "Maple Mono NF CN, monospace",
   "vim.useSystemClipboard": true,
@@ -385,5 +384,6 @@
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "workbench.activityBar.location": "top"
 }

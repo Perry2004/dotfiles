@@ -120,7 +120,7 @@ function cdl() {
 }
 
 function gitclean() {
-    git switch main
+    git switch $(git_main_branch)
     git pull -p
     git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
 }
