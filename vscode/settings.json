@@ -385,5 +385,9 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.activityBar.location": "top"
+  "workbench.activityBar.location": "top",
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "file:/**/*.parquet": "jupyter-data-wrangler"
+  }
 }
