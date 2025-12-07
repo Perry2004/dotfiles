@@ -553,5 +553,15 @@
     "key": "tab",
     "command": "editor.action.inlineSuggest.commit",
     "when": "editorTextFocus && vim.mode == 'Normal' && inlineSuggestionVisible"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "editor.action.increaseHoverVerbosityLevel",
+    "when": "editorHoverVisible && vim.active && vim.mode == 'Normal'"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "editor.action.decreaseHoverVerbosityLevel",
+    "when": "editorHoverVisible && vim.active && vim.mode == 'Normal'"
   }
 ]
