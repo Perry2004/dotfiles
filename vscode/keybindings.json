@@ -265,8 +265,7 @@
   },
   {
     "key": "ctrl+f p",
-    "command": "workbench.action.openRecent",
-    "when": "vim.active && vim.mode == 'Normal'"
+    "command": "workbench.action.openRecent"
   },
   {
     "key": "ctrl+f /",
@@ -563,5 +562,9 @@
     "key": "ctrl+j",
     "command": "editor.action.decreaseHoverVerbosityLevel",
     "when": "editorHoverVisible && vim.active && vim.mode == 'Normal'"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.openRecent"
   }
 ]
