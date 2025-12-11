@@ -91,7 +91,7 @@ alt - c : yabai -m display --focus east
 # -- APPLICATIONS & SYSTEM --
 
 # Open Terminal 
-cmd - return : open -na Ghostty
+# cmd - return : open -na Ghostty
 
 # Restart Yabai/Skhd 
 ctrl + alt - r : yabai --restart-service && skhd --restart-service
