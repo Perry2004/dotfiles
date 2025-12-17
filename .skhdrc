@@ -81,7 +81,7 @@ shift + alt - 4 : yabai -m window --space 4
 shift + alt - 5 : yabai -m window --space 5
 
 # Create / Destroy Space
-cmd + alt - n : yabai -m space --create && yabai -m space --focus next
+cmd + alt - n : yabai -m space --create
 cmd + alt - w : yabai -m space --destroy "$(yabai -m query --spaces --display | jq -r 'map(select(."has-focus" == true))[0].index')"
 
 # Focus Monitor (Display)
