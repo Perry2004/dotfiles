@@ -78,6 +78,7 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
     brew
+    direnv
 )
 
 source $ZSH/oh-my-zsh.sh
