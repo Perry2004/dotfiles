@@ -1,7 +1,7 @@
 {
   "github.copilot.nextEditSuggestions.enabled": true,
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
-  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.iconTheme": "catppuccin-latte",
   "icontheme.darkIconTheme": "catppuccin-mocha",
   "icontheme.lightIconTheme": "catppuccin-latte",
   "editor.accessibilitySupport": "off",
@@ -288,7 +288,8 @@
     "[HACK]"
   ],
   "files.associations": {
-    "*.css": "tailwindcss"
+    "*.css": "tailwindcss",
+    ".envrc": "dotenv"
   },
   "java.compile.nullAnalysis.mode": "automatic",
   "remote.defaultExtensionsIfInstalledLocally": [
