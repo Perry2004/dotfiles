@@ -403,5 +403,6 @@
     "markdown": true,
     "scminput": false
   },
-  "java.saveActions.organizeImports": true
+  "java.saveActions.organizeImports": true,
+  "chat.viewSessions.orientation": "stacked"
 }
