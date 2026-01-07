@@ -232,7 +232,6 @@
       "commands": ["editor.action.marker.prevInFiles"]
     }
   ],
-  "editor.formatOnSave": true,
   "files.autoSave": "onFocusChange",
   "editor.formatOnPaste": true,
   "editor.autoIndentOnPaste": true,
@@ -404,5 +403,7 @@
     "scminput": false
   },
   "java.saveActions.organizeImports": true,
-  "chat.viewSessions.orientation": "stacked"
+  "chat.viewSessions.orientation": "stacked",
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "workbench.editor.showTabIndex": true
 }
