@@ -405,5 +405,7 @@
   "java.saveActions.organizeImports": true,
   "chat.viewSessions.orientation": "stacked",
   "editor.formatOnSaveMode": "modificationsIfAvailable",
-  "workbench.editor.showTabIndex": true
+  "workbench.editor.showTabIndex": true,
+  "editor.formatOnSave": true,
+  "terminal.integrated.initialHint": false
 }
