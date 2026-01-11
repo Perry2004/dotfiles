@@ -29,6 +29,7 @@ DOTFILES=(
   ".config/iterm2/com.googlecode.iterm2.plist:iterm2/com.googlecode.iterm2.plist"
   ".yabairc"
   ".skhdrc"
+  ".config/yazi/yazi.toml"
 )
 
 # Function to get source and destination paths
