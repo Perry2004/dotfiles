@@ -1,14 +1,14 @@
 {
   "github.copilot.nextEditSuggestions.enabled": true,
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
-  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.iconTheme": "catppuccin-latte",
   "icontheme.darkIconTheme": "catppuccin-mocha",
   "icontheme.lightIconTheme": "catppuccin-latte",
   "editor.accessibilitySupport": "off",
   "editor.fontFamily": "Maple Mono NF CN, monospace",
   "vim.useSystemClipboard": true,
   "extensions.experimental.affinity": {
-    "vscodevim.vim": 1
+    "vscodevim.vim": 1,
   },
   "window.autoDetectColorScheme": true,
   "vim.camelCaseMotion.enable": true,
@@ -20,217 +20,217 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["<leader>", "b", "d"],
-      "commands": ["workbench.action.closeActiveEditor"]
+      "commands": ["workbench.action.closeActiveEditor"],
     },
     {
       "before": ["<leader>", "b", "c"],
-      "commands": ["workbench.action.closeAllEditors"]
+      "commands": ["workbench.action.closeAllEditors"],
     },
     {
       "before": ["<leader>", "b", "b"],
       "commands": [
-        "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
-      ]
+        "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+      ],
     },
     {
       "before": ["<leader>", "b", "t"],
-      "commands": ["workbench.action.reopenClosedEditor"]
+      "commands": ["workbench.action.reopenClosedEditor"],
     },
     {
       "before": ["<leader>", "b", "n"],
-      "commands": ["workbench.action.nextEditor", "extension.vim_escape"]
+      "commands": ["workbench.action.nextEditor", "extension.vim_escape"],
     },
     {
       "before": ["<leader>", "b", "p"],
-      "commands": ["workbench.action.previousEditor", "extension.vim_escape"]
+      "commands": ["workbench.action.previousEditor", "extension.vim_escape"],
     },
     {
       "before": ["<leader>", "b", "r"],
-      "commands": ["workbench.action.closeEditorsToTheRight"]
+      "commands": ["workbench.action.closeEditorsToTheRight"],
     },
     {
       "before": ["<leader>", "b", "l"],
-      "commands": ["workbench.action.closeEditorsToTheLeft"]
+      "commands": ["workbench.action.closeEditorsToTheLeft"],
     },
     {
       "before": ["<leader>", "b", "o"],
-      "commands": ["workbench.action.closeOtherEditors"]
+      "commands": ["workbench.action.closeOtherEditors"],
     },
     {
       "before": ["<leader>", "w", "s"],
-      "commands": ["workbench.action.splitEditorDown"]
+      "commands": ["workbench.action.splitEditorDown"],
     },
     {
       "before": ["<leader>", "w", "v"],
-      "commands": ["workbench.action.splitEditorRight"]
+      "commands": ["workbench.action.splitEditorRight"],
     },
     {
       "before": ["<leader>", "w", "+"],
-      "commands": ["workbench.action.increaseViewHeight"]
+      "commands": ["workbench.action.increaseViewHeight"],
     },
     {
       "before": ["<leader>", "w", "-"],
-      "commands": ["workbench.action.decreaseViewHeight"]
+      "commands": ["workbench.action.decreaseViewHeight"],
     },
     {
       "before": ["<leader>", "w", ">"],
-      "commands": ["workbench.action.increaseViewWidth"]
+      "commands": ["workbench.action.increaseViewWidth"],
     },
     {
       "before": ["<leader>", "w", "<"],
-      "commands": ["workbench.action.decreaseViewWidth"]
+      "commands": ["workbench.action.decreaseViewWidth"],
     },
     {
       "before": ["<leader>", "w", "d"],
-      "commands": ["workbench.action.closeEditorsInGroup"]
+      "commands": ["workbench.action.closeEditorsInGroup"],
     },
     {
       "before": ["<leader>", "w", "w"],
-      "commands": ["workbench.action.focusPreviousGroup"]
+      "commands": ["workbench.action.focusPreviousGroup"],
     },
     {
       "before": ["<leader>", "w", "K"],
-      "commands": ["workbench.action.moveEditorToAboveGroup"]
+      "commands": ["workbench.action.moveEditorToAboveGroup"],
     },
     {
       "before": ["<leader>", "w", "_"],
-      "commands": ["workbench.action.toggleEditorWidths"]
+      "commands": ["workbench.action.toggleEditorWidths"],
     },
     {
       "before": ["<leader>", "w", "|"],
-      "commands": ["workbench.action.toggleEditorWidths"]
+      "commands": ["workbench.action.toggleEditorWidths"],
     },
     {
       "before": ["<leader>", "c", "a"],
-      "commands": ["editor.action.quickFix"]
+      "commands": ["editor.action.quickFix"],
     },
     {
       "before": ["<leader>", "c", "r"],
-      "commands": ["editor.action.rename"]
+      "commands": ["editor.action.rename"],
     },
     {
       "before": ["<leader>", "c", "f"],
-      "commands": ["editor.action.formatDocument"]
+      "commands": ["editor.action.formatDocument"],
     },
     {
       "before": ["<leader>", "c", "d"],
-      "commands": ["editor.action.showHover"]
+      "commands": ["editor.action.showHover"],
     },
     {
       "before": ["<leader>", "f", "b"],
-      "commands": ["workbench.action.showAllEditors"]
+      "commands": ["workbench.action.showAllEditors"],
     },
     {
       "before": ["<leader>", "f", "f"],
-      "commands": ["workbench.action.quickOpen"]
+      "commands": ["workbench.action.quickOpen"],
     },
     {
       "before": ["<leader>", "<leader>"],
-      "commands": ["workbench.action.quickOpen"]
+      "commands": ["workbench.action.quickOpen"],
     },
     {
       "before": ["<leader>", "f", "p"],
-      "commands": ["workbench.action.openRecent"]
+      "commands": ["workbench.action.openRecent"],
     },
     {
       "before": ["<leader>", "/"],
       "commands": [
         {
           "command": "workbench.action.quickOpen",
-          "args": "%"
-        }
-      ]
+          "args": "%",
+        },
+      ],
     },
     {
       "before": ["<leader>", "f", "s"],
-      "commands": ["workbench.action.gotoSymbol"]
+      "commands": ["workbench.action.gotoSymbol"],
     },
     {
       "before": ["<leader>", "|"],
-      "commands": ["workbench.action.splitEditorRight"]
+      "commands": ["workbench.action.splitEditorRight"],
     },
     {
       "before": ["<leader>", "-"],
-      "commands": ["workbench.action.splitEditorDown"]
+      "commands": ["workbench.action.splitEditorDown"],
     },
     {
       "before": ["j"],
-      "after": ["g", "j"]
+      "after": ["g", "j"],
     },
     {
       "before": ["k"],
-      "after": ["g", "k"]
+      "after": ["g", "k"],
     },
     {
       "before": ["g", "d"],
-      "commands": ["editor.action.revealDefinition"]
+      "commands": ["editor.action.revealDefinition"],
     },
     {
       "before": ["g", "D"],
-      "commands": ["editor.action.revealDeclaration"]
+      "commands": ["editor.action.revealDeclaration"],
     },
     {
       "before": ["g", "i"],
-      "commands": ["editor.action.goToImplementation"]
+      "commands": ["editor.action.goToImplementation"],
     },
     {
       "before": ["g", "y"],
-      "commands": ["editor.action.goToTypeDefinition"]
+      "commands": ["editor.action.goToTypeDefinition"],
     },
     {
       "before": ["g", "x"],
-      "commands": ["editor.action.openLink"]
+      "commands": ["editor.action.openLink"],
     },
     {
       "before": ["g", "r"],
-      "commands": ["editor.action.goToReferences"]
+      "commands": ["editor.action.goToReferences"],
     },
     {
       "before": ["g", "b"],
       "commands": ["workbench.action.navigateBack"],
-      "when": "canNavigateBack"
+      "when": "canNavigateBack",
     },
     {
       "before": ["g", "f"],
       "commands": ["workbench.action.navigateForward"],
-      "when": "canNavigateForward"
+      "when": "canNavigateForward",
     },
     {
       "before": ["s"],
-      "commands": ["flash-vscode.start"]
+      "commands": ["flash-vscode.start"],
     },
     {
       "before": ["S"],
-      "commands": ["flash-vscode.startSelection"]
+      "commands": ["flash-vscode.startSelection"],
     },
     {
       "before": ["<BS>"],
-      "commands": ["flash-vscode.backspace"]
+      "commands": ["flash-vscode.backspace"],
     },
     {
       "before": ["<leader>", "g", "n"],
-      "commands": ["editor.action.dirtydiff.next"]
+      "commands": ["editor.action.dirtydiff.next"],
     },
     {
       "before": ["<leader>", "g", "p"],
-      "commands": ["editor.action.dirtydiff.previous"]
+      "commands": ["editor.action.dirtydiff.previous"],
     },
     {
       "before": ["<leader>", "g", "d"],
-      "commands": ["git.revertSelectedRanges"]
+      "commands": ["git.revertSelectedRanges"],
     },
     {
       "before": ["<leader>", "g", "s"],
-      "commands": ["git.stageSelectedRanges"]
+      "commands": ["git.stageSelectedRanges"],
     },
     {
       "before": ["<leader>", "x", "n"],
-      "commands": ["editor.action.marker.nextInFiles"]
+      "commands": ["editor.action.marker.nextInFiles"],
     },
     {
       "before": ["<leader>", "x", "p"],
-      "commands": ["editor.action.marker.prevInFiles"]
-    }
+      "commands": ["editor.action.marker.prevInFiles"],
+    },
   ],
   "files.autoSave": "onFocusChange",
   "editor.formatOnPaste": true,
@@ -284,11 +284,11 @@
     "todo))",
     "fixme))",
     "[ERROR]",
-    "[HACK]"
+    "[HACK]",
   ],
   "files.associations": {
     "*.css": "tailwindcss",
-    ".envrc": "dotenv"
+    ".envrc": "dotenv",
   },
   "java.compile.nullAnalysis.mode": "automatic",
   "remote.defaultExtensionsIfInstalledLocally": [
@@ -303,10 +303,10 @@
     "adpyke.codesnap",
     "IuriiBarlukov.cursor-column-highlight",
     "manuthebyte.dynamic-icon-theme",
-    "kisstkondoros.vscode-gutter-preview"
+    "kisstkondoros.vscode-gutter-preview",
   ],
   "[csv]": {
-    "editor.inlayHints.maximumLength": 0
+    "editor.inlayHints.maximumLength": 0,
   },
   "terminal.integrated.scrollback": 20000,
   "terminal.integrated.persistentSessionScrollback": 500,
@@ -320,14 +320,14 @@
   "git.autofetch": true,
   "editor.lineNumbers": "relative",
   "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "window.commandCenter": false,
   "[python]": {
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
   },
   "security.workspace.trust.untrustedFiles": "open",
   "python.analysis.typeCheckingMode": "standard",
@@ -341,13 +341,13 @@
   "zenMode.hideLineNumbers": false,
   "zenMode.hideStatusBar": false,
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "vscode.json-language-features",
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "terminal.integrated.allowedLinkSchemes": [
     "file",
@@ -356,21 +356,21 @@
     "mailto",
     "vscode",
     "vscode-insiders",
-    "docker-desktop"
+    "docker-desktop",
   ],
   "[dockercompose]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "git.suggestSmartCommit": false,
   "[tsv]": {
-    "editor.inlayHints.maximumLength": 0
+    "editor.inlayHints.maximumLength": 0,
   },
   "java.inlayHints.parameterTypes.enabled": true,
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "vs-kubernetes": {
-    "vs-kubernetes.crd-code-completion": "enabled"
+    "vs-kubernetes.crd-code-completion": "enabled",
   },
   "workbench.preferredDarkColorTheme": "Tokyo Night Storm",
   "editor.minimap.autohide": "mouseover",
@@ -379,19 +379,19 @@
   "git.confirmSync": false,
   "workbench.colorCustomizations": {
     "[Tokyo Night Storm]": {
-      "editorGutter.modifiedBackground": "#66ccff"
-    }
+      "editorGutter.modifiedBackground": "#66ccff",
+    },
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "workbench.activityBar.location": "top",
   "workbench.editorAssociations": {
     "*.copilotmd": "vscode.markdown.preview.editor",
-    "file:/**/*.parquet": "jupyter-data-wrangler"
+    "file:/**/*.parquet": "jupyter-data-wrangler",
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
@@ -400,12 +400,12 @@
     "*": true,
     "plaintext": false,
     "markdown": true,
-    "scminput": false
+    "scminput": false,
   },
   "java.saveActions.organizeImports": true,
   "chat.viewSessions.orientation": "stacked",
   "editor.formatOnSaveMode": "modificationsIfAvailable",
   "workbench.editor.showTabIndex": true,
   "editor.formatOnSave": true,
-  "terminal.integrated.initialHint": false
+  "terminal.integrated.initialHint": false,
 }
