@@ -218,3 +218,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # asdf go plugins 
 . ${ASDF_DATA_DIR:-$HOME/.asdf}/plugins/golang/set-env.zsh
+
+# pipx autocompletion
+autoload -U compinit && compinit
+eval "$(register-python-argcomplete pipx)"
+
