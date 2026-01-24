@@ -1,7 +1,7 @@
 {
   "github.copilot.nextEditSuggestions.enabled": true,
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
-  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.iconTheme": "catppuccin-mocha",
   "icontheme.darkIconTheme": "catppuccin-mocha",
   "icontheme.lightIconTheme": "catppuccin-latte",
   "editor.accessibilitySupport": "off",
@@ -408,4 +408,5 @@
   "workbench.editor.showTabIndex": true,
   "editor.formatOnSave": true,
   "terminal.integrated.initialHint": false,
+  "ansible.lightspeed.enabled": false,
 }
