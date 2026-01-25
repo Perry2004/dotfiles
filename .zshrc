@@ -83,6 +83,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# starship
+eval "$(starship init zsh)"
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -152,14 +155,14 @@ autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 
-# starship
-eval "$(starship init zsh)"
-
 # iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # asdf runtime management
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+# asdf go plugins 
+. ${ASDF_DATA_DIR:-$HOME/.asdf}/plugins/golang/set-env.zsh
 
 # yarn path
 export PATH="${HOME}/.yarn/bin:$PATH"
@@ -168,7 +171,6 @@ fpath=(/Users/perryzhu/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
-
 
 # pnpm
 export PNPM_HOME="${HOME}/Library/pnpm"
@@ -205,6 +207,13 @@ if type compdef &>/dev/null; then
 fi
 ###-end-pnpm-completion-###
 
+# homebrew shellenv
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# pipx autocompletion
+autoload -U compinit && compinit
+eval "$(register-python-argcomplete pipx)"
+
 # yazi shell wrapper
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -214,12 +223,10 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# zoxide 
+eval "$(zoxide init zsh)"
 
-# asdf go plugins 
-. ${ASDF_DATA_DIR:-$HOME/.asdf}/plugins/golang/set-env.zsh
-
-# pipx autocompletion
-autoload -U compinit && compinit
-eval "$(register-python-argcomplete pipx)"
-
+# fzf
+export FZF_DEFAULT_OPTS="--height 80% --tmux center,80% --style full --style full --preview 'fzf-preview.sh {}' --bind 'focus:transform-header:file --brief {}'"
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
