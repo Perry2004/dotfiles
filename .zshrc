@@ -83,9 +83,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# starship
-eval "$(starship init zsh)"
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -213,6 +210,9 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # pipx autocompletion
 autoload -U compinit && compinit
 eval "$(register-python-argcomplete pipx)"
+
+# starship
+eval "$(starship init zsh)"
 
 # yazi shell wrapper
 function y() {
