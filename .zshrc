@@ -207,10 +207,6 @@ fi
 # homebrew shellenv
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# pipx autocompletion
-autoload -U compinit && compinit
-eval "$(register-python-argcomplete pipx)"
-
 # starship
 eval "$(starship init zsh)"
 
@@ -223,7 +219,7 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# zoxide 
+# zoxide
 eval "$(zoxide init zsh)"
 
 # fzf
