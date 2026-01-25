@@ -13,7 +13,9 @@ bell-features = system, audio, attention, title, no-border
 
 macos-titlebar-style = tabs
 
-shell-integration-features = true
+shell-integration-features = no-cursor
+cursor-style = block
+cursor-style-blink = true
 
 scrollback-limit = 50000
 
