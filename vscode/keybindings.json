@@ -219,7 +219,7 @@
   {
     "key": "cmd+e",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "!editorFocus",
+    "when": "!editorFocus && sideBarFocus",
   },
   // File Explorer actions
   {
