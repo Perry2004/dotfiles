@@ -1,22 +1,17 @@
+# Fix incomplete PATH on first terminal boot (loads /usr/sbin, /sbin, etc.)
+if [[ -x /usr/libexec/path_helper ]] && [[ "$PATH" != *"/usr/sbin"* ]]; then
+    eval $(/usr/libexec/path_helper -s)
+fi
+
+# Initialize Homebrew early (so plugins can use it)
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time Oh My Zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME=""
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
@@ -91,14 +86,14 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='code --wait'
+fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch $(uname -m)"
+export ARCHFLAGS="-arch $(uname -m)"
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
@@ -146,25 +141,20 @@ export plai
 alias lg='lazygit'
 alias gcln='gitclean'
 
-# The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(Users/perryzhu/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
-# End of Docker CLI completions
-
 # iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # asdf runtime management
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
-# asdf go plugins 
+# asdf go plugins
 . ${ASDF_DATA_DIR:-$HOME/.asdf}/plugins/golang/set-env.zsh
 
 # yarn path
 export PATH="${HOME}/.yarn/bin:$PATH"
+
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/perryzhu/.docker/completions $fpath)
+fpath=($HOME/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
@@ -176,6 +166,7 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
 #compdef pnpm
 ###-begin-pnpm-completion-###
 if type compdef &>/dev/null; then
@@ -204,9 +195,6 @@ if type compdef &>/dev/null; then
 fi
 ###-end-pnpm-completion-###
 
-# homebrew shellenv
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
 # starship
 eval "$(starship init zsh)"
 
@@ -224,5 +212,6 @@ eval "$(zoxide init zsh)"
 
 # fzf
 export FZF_DEFAULT_OPTS="--height 80% --tmux center,80% --style full --style full --preview 'fzf-preview.sh {}' --bind 'focus:transform-header:file --brief {}'"
+
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
