@@ -369,9 +369,6 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
-  "vs-kubernetes": {
-    "vs-kubernetes.crd-code-completion": "enabled",
-  },
   "workbench.preferredDarkColorTheme": "Tokyo Night Storm",
   "editor.minimap.autohide": "mouseover",
   "chat.mcp.gallery.enabled": true,
