@@ -15,7 +15,7 @@ macos-titlebar-style = tabs
 
 shell-integration-features = no-cursor
 cursor-style = block
-cursor-style-blink = true
+cursor-style-blink = false
 
 scrollback-limit = 50000
 
