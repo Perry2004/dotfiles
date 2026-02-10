@@ -41,8 +41,8 @@
     "args": {
       "commands": [
         "workbench.action.toggleMaximizedPanel",
-        // "workbench.action.terminal.focus"
-        "workbench.action.focusPanel",
+        // "workbench.action.terminal.focus",
+        "workbench.action.focusPanel", // so that it works also for the problems panel
       ],
     },
   },
@@ -99,11 +99,11 @@
     "when": "auxiliaryBarVisible",
   },
   // wait until cline fixes the auxiliaryBarFocus reporting issue
-  // {
-  //     "key": "cmd+l",
-  //     "command": "workbench.action.focusAuxiliaryBar",
-  //     "when": "auxiliaryBarVisible && !auxiliaryBarFocus"
-  // },
+  {
+    "key": "cmd+l",
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "auxiliaryBarVisible && !auxiliaryBarFocus",
+  },
   {
     "key": "cmd+l",
     "command": "runCommands",
@@ -111,6 +111,16 @@
     "args": {
       "commands": [
         "workbench.action.toggleAuxiliaryBar",
+        "workbench.action.focusAuxiliaryBar",
+      ],
+    },
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleMaximizedAuxiliaryBar",
         "workbench.action.focusAuxiliaryBar",
       ],
     },
