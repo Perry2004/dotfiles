@@ -407,4 +407,5 @@
   "terminal.integrated.initialHint": false,
   "ansible.lightspeed.enabled": false,
   "makefile.configureOnOpen": true,
+  "workbench.productIconTheme": "feather-vscode",
 }
