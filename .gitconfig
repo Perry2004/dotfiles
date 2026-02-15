@@ -23,3 +23,5 @@
 	email = perryzhu2004@outlook.com
 [fetch]
 	prune = true
+[init]
+	defaultBranch = main
