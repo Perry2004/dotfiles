@@ -408,4 +408,6 @@
   "ansible.lightspeed.enabled": false,
   "makefile.configureOnOpen": true,
   "workbench.productIconTheme": "feather-vscode",
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "path-intellisense.autoTriggerNextSuggestion": true,
 }
