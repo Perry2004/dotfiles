@@ -325,7 +325,6 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
-  "window.commandCenter": false,
   "[python]": {
     "diffEditor.ignoreTrimWhitespace": false,
   },
@@ -410,4 +409,19 @@
   "workbench.productIconTheme": "feather-vscode",
   "path-intellisense.autoSlashAfterDirectory": true,
   "path-intellisense.autoTriggerNextSuggestion": true,
+  "[ansible]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+  },
+  "window.commandCenter": false,
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.implementationsCodeLens.showOnInterfaceMethods": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.suggest.completeFunctionCalls": true,
+  "terraform.codelens.referenceCount": true,
+  "python.analysis.referencesCodeLens": true,
+  "javascript.referencesCodeLens.enabled": true,
+  "java.referencesCodeLens.enabled": true,
+  "diffEditor.codeLens": true,
+  "errorLens.codeLensEnabled": true,
 }
