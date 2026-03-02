@@ -432,6 +432,22 @@
     "command": "editor.action.showHover",
     "when": "editorTextFocus && vim.mode == 'Normal'",
   },
+  {
+    "key": "escape",
+    "command": "closeParameterHints",
+    "when": "editorFocus && parameterHintsVisible && (!vim.active || vim.mode != 'Insert')"
+  },
+  {
+    "key": "escape",
+    "command": "runCommands",
+    "when": "editorTextFocus && vim.active && vim.mode == 'Insert' && parameterHintsVisible",
+    "args": {
+      "commands": [
+        "closeParameterHints",
+        "extension.vim_escape"
+      ]
+    }
+  },
   // Scroll hover panel
   {
     "key": "ctrl+n",
@@ -521,7 +537,7 @@
   {
     "key": "escape",
     "command": "extension.vim_escape",
-    "when": "editorTextFocus && !inDebugRepl",
+    "when": "editorTextFocus && !inDebugRepl && !parameterHintsVisible",
   },
   {
     "key": "escape",
