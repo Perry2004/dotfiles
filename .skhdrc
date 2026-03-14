@@ -81,8 +81,12 @@ shift + alt - 4 : yabai -m window --space 4
 shift + alt - 5 : yabai -m window --space 5
 
 # Create / Destroy Space
-cmd + alt - n : yabai -m space --create
-cmd + alt - w : yabai -m space --destroy "$(yabai -m query --spaces --display | jq -r 'map(select(."has-focus" == true))[0].index')"
+cmd + alt - n : yabai -m space --create && \
+                index=$(yabai -m query --spaces --display | jq '. | length') && \
+                yabai -m space --focus "${index}"
+cmd + alt - w : cur_idx=$(yabai -m query --spaces --display | jq -r 'map(select(."has-focus" == true))[0].index') && \
+                (yabai -m space --focus recent || yabai -m space --focus prev || yabai -m space --focus last); \
+                yabai -m space --destroy $cur_idx
 
 # Focus Monitor (Display)
 alt - z : yabai -m display --focus west
