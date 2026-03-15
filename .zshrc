@@ -74,6 +74,7 @@ plugins=(
     zsh-autosuggestions
     brew
     direnv
+    terraform
 )
 
 source $ZSH/oh-my-zsh.sh
