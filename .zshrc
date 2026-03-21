@@ -140,6 +140,7 @@ export plai
 
 # aliases
 alias lg='lazygit'
+alias lzd="lazydocker"
 alias gcln='gitclean'
 
 # iterm2 shell integration
