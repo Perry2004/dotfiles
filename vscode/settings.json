@@ -1,7 +1,7 @@
 {
   "github.copilot.nextEditSuggestions.enabled": true,
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
-  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.iconTheme": "catppuccin-mocha",
   "icontheme.darkIconTheme": "catppuccin-mocha",
   "icontheme.lightIconTheme": "catppuccin-latte",
   "editor.accessibilitySupport": "off",
@@ -287,7 +287,6 @@
     "eamodio.gitlens",
     "hoovercj.vscode-power-mode",
     "Gruntfuggly.todo-tree",
-    "WakaTime.vscode-wakatime",
     "adpyke.codesnap",
     "IuriiBarlukov.cursor-column-highlight",
     "manuthebyte.dynamic-icon-theme",
@@ -425,6 +424,6 @@
   "claudeCode.selectedModel": "default",
   "markdown.extension.preview.autoShowPreviewToSide": true,
   "editor.formatOnSave": true,
-  "files.trimTrailingWhitespace": true,
   "claudeCode.allowDangerouslySkipPermissions": true,
+  "files.trimTrailingWhitespace": true,
 }
