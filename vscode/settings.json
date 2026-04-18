@@ -421,9 +421,9 @@
   "todo-tree.highlights.enabled": false,
   "biome.suggestInstallingGlobally": false,
   "claudeCode.preferredLocation": "panel",
-  "claudeCode.selectedModel": "default",
   "markdown.extension.preview.autoShowPreviewToSide": true,
   "editor.formatOnSave": true,
   "claudeCode.allowDangerouslySkipPermissions": true,
   "files.trimTrailingWhitespace": true,
+  "workbench.editor.useModal": "off",
 }
