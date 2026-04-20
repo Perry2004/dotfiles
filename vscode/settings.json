@@ -426,4 +426,13 @@
   "claudeCode.allowDangerouslySkipPermissions": true,
   "files.trimTrailingWhitespace": true,
   "workbench.editor.useModal": "off",
+  "advancedLocalFormatters.formatters": [
+    {
+      "command": ["helmfmt", "--files", "$absoluteFilePath", "--stdout"],
+      "languages": ["helm"],
+    },
+  ],
+  "[helm]": {
+    "editor.defaultFormatter": "webfreak.advanced-local-formatters",
+  },
 }
