@@ -31,7 +31,7 @@ DOTFILES=(
   ".skhdrc"
   ".config/yazi/yazi.toml"
   "${HOME}/Library/Application Support/k9s/config.yaml:k9s/config.yaml"
-  "${HOME}/Library/Application Support/k9s/skins/transparent.yaml:k9s/skins/transparent.yaml"
+  "${HOME}/Library/Application Support/k9s/skins/skin.yaml:k9s/skins/skin.yaml"
 )
 
 # Function to get source and destination paths
