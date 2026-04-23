@@ -233,7 +233,6 @@
     },
   ],
   "files.autoSave": "onFocusChange",
-  "editor.formatOnPaste": true,
   "editor.autoIndentOnPaste": true,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.definitionLinkOpensInPeek": true,
@@ -422,17 +421,13 @@
   "biome.suggestInstallingGlobally": false,
   "claudeCode.preferredLocation": "panel",
   "markdown.extension.preview.autoShowPreviewToSide": true,
-  "editor.formatOnSave": true,
   "claudeCode.allowDangerouslySkipPermissions": true,
   "files.trimTrailingWhitespace": true,
   "workbench.editor.useModal": "off",
-  "advancedLocalFormatters.formatters": [
-    {
-      "command": ["helmfmt", "--files", "$absoluteFilePath", "--stdout"],
-      "languages": ["helm"],
-    },
-  ],
-  "[helm]": {
-    "editor.defaultFormatter": "webfreak.advanced-local-formatters",
+  "editor.formatOnSave": true,
+  "githubPullRequests.createOnPublishBranch": "never",
+  "vs-kubernetes": {
+    "vs-kubernetes.crd-code-completion": "enabled",
   },
+  "editor.formatOnPaste": true,
 }
