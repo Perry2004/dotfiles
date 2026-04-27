@@ -1,110 +1,115 @@
 # -----------------------------------------------------------------------------
-# Transparent skin for TokyoNight (Day / Storm)
-# Text/bg: inherit from terminal via "default"
-# Highlight/cursor/focus: medium-toned colors visible on both light & dark
+# Rose Pine skin
 # -----------------------------------------------------------------------------
 
+# Styles...
+foreground: &foreground "#e0def4"
+background: &background "#191724"
+current_line: &current_line "#26233a"
+selection: &selection "#26233a"
+comment: &comment "#6272a4"
+cyan: &cyan "#ebbcba"
+green: &green "#31748f"
+orange: &orange "#f6c177"
+pink: &pink "#c4a7e7"
+purple: &purple "#c4a7e7"
+red: &red "#eb6f92"
+yellow: &yellow "#f6c177"
+
+# Skin...
 k9s:
+  # General K9s styles
   body:
-    fgColor: default
-    bgColor: default
-    logoColor: default
-    logoColorMsg: default
-    logoColorInfo: default
-    logoColorWarn: default
-    logoColorError: default
+    fgColor: *foreground
+    bgColor: *background
+    logoColor: *purple
+  # Command prompt styles
   prompt:
-    fgColor: default
-    bgColor: default
-    suggestColor: default
-    border:
-      command: default
-      default: default
-  help:
-    fgColor: default
-    bgColor: default
-    sectionColor: default
-    keyColor: default
-    numKeyColor: default
+    fgColor: *foreground
+    bgColor: *background
+    suggestColor: *purple
+  # ClusterInfoView styles.
   info:
-    fgColor: default
-    sectionColor: default
-    cpuColor: default
-    memColor: default
-    k9sRevColor: default
+    fgColor: *pink
+    sectionColor: *foreground
+  # Dialog styles.
   dialog:
-    fgColor: default
-    bgColor: default
-    labelFgColor: default
-    fieldFgColor: default
-    buttonFgColor: white
-    buttonBgColor: darkslateblue
-    buttonFocusFgColor: white
-    buttonFocusBgColor: dodgerblue
+    fgColor: *foreground
+    bgColor: *background
+    buttonFgColor: *foreground
+    buttonBgColor: *purple
+    buttonFocusFgColor: *yellow
+    buttonFocusBgColor: *pink
+    labelFgColor: *orange
+    fieldFgColor: *foreground
   frame:
+    # Borders styles.
     border:
-      fgColor: default
-      focusColor: steelblue
-    crumbs:
-      fgColor: default
-      bgColor: default
-      activeColor: orange
-    title:
-      fgColor: default
-      bgColor: default
-      highlightColor: fuchsia
-      counterColor: default
-      filterColor: default
+      fgColor: *selection
+      focusColor: *current_line
     menu:
-      fgColor: default
-      keyColor: default
-      numKeyColor: default
+      fgColor: *foreground
+      keyColor: *pink
+      # Used for favorite namespaces
+      numKeyColor: *pink
+    # CrumbView attributes for history navigation.
+    crumbs:
+      fgColor: *foreground
+      bgColor: *current_line
+      activeColor: *current_line
+    # Resource status and update styles
     status:
-      newColor: steelblue
-      modifyColor: limegreen
-      addColor: dodgerblue
-      pendingColor: darkorange
-      errorColor: orangered
-      highlightColor: cadetblue
-      killColor: mediumpurple
-      completedColor: lightslategray
+      newColor: *cyan
+      modifyColor: *purple
+      addColor: *green
+      errorColor: *red
+      highlightColor: *orange
+      killColor: *comment
+      completedColor: *comment
+    # Border title styles.
+    title:
+      fgColor: *foreground
+      bgColor: *current_line
+      highlightColor: *orange
+      counterColor: *purple
+      filterColor: *pink
   views:
+    # Charts skins...
     charts:
       bgColor: default
-      dialBgColor: default
-      chartBgColor: default
-      focusFgColor: white
-      focusBgColor: orange
+      defaultDialColors:
+        - *purple
+        - *red
+      defaultChartColors:
+        - *purple
+        - *red
+    # TableView attributes.
     table:
-      fgColor: default
-      bgColor: default
-      cursorFgColor: white
-      cursorBgColor: steelblue
-      markColor: mediumseagreen
+      fgColor: *foreground
+      bgColor: *background
+      # Header row styles.
       header:
-        fgColor: default
-        bgColor: default
-        sorterColor: steelblue
-        selectedSortColumnColor: steelblue
+        fgColor: *foreground
+        bgColor: *background
+        sorterColor: *cyan
+    # Xray view attributes.
     xray:
-      fgColor: default
-      bgColor: default
-      cursorColor: dodgerblue
-      cursorTextColor: white
-      graphicColor: default
-    logs:
-      fgColor: default
-      bgColor: default
-      indicator:
-        fgColor: default
-        bgColor: default
-        toggleOnColor: limegreen
-        toggleOffColor: gray
+      fgColor: *foreground
+      bgColor: *background
+      cursorColor: *current_line
+      graphicColor: *purple
+      showIcons: false
+    # YAML info styles.
     yaml:
-      keyColor: default
-      colonColor: default
-      valueColor: default
-    picker:
-      mainColor: default
-      focusColor: steelblue
-      shortcutColor: steelblue
+      keyColor: *pink
+      colonColor: *purple
+      valueColor: *foreground
+    # Logs styles.
+    logs:
+      fgColor: *foreground
+      bgColor: *background
+      indicator:
+        fgColor: *foreground
+        bgColor: *purple
+        toggleOnColor: *green
+        toggleOffColor: *selection
