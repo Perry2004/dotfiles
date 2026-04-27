@@ -1,0 +1,8 @@
+backups/
+.DS_Store
+vscode/globalStorage/
+vscode/sync/
+k9s/aliases.yaml
+k9s/clusters/
+k9s/k9s.log
+k9s/screen-dumps/

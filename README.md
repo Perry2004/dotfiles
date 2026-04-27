@@ -27,6 +27,7 @@
 │   └── yazi
 │       └── yazi.toml # Yazi file manager config.
 ├── .gitconfig
+├── .gitignore
 ├── .gitignore_global
 ├── .skhdrc # skhd hotkeys for yabai.
 ├── .tmux.conf # tmux configs, tpm plugins, theme, session restore and keybindings.
@@ -42,17 +43,20 @@
 │   └── skins
 │       └── skin.yaml # Rose Pine k9s color theme.
 ├── scripts
-│   ├── load-dotfiles.sh # Load dotfiles and links.
-│   └── save-dotfiles.sh # Save dotfiles and links.
+│   ├── archive
+│   │   ├── load-dotfiles.sh # Legacy copy/load script.
+│   │   └── save-dotfiles.sh # Legacy copy/save script.
+│   └── setup-symlinks.sh # Link all managed dotfiles into their expected locations.
 └── vscode
+    ├── chatLanguageModels.json
     ├── keybindings.json # VSCode keybindings inspired by LazyVim.
     ├── mcp.json
-    ├── settings.json
-    └── snippets
+    └── settings.json
 ```
 ## Scripts
 
-- `scripts/load-dotfiles.sh`: Restores the repo's dotfiles into the expected macOS locations under `$HOME` and app support folders.
-    - Nvim config is symlinked to `~/.config/nvim`.
-    - Other dotfiles are copied to their respective locations.
-- `scripts/save-dotfiles.sh`: Saves dotfiles into the repo
+- `scripts/setup-symlinks.sh`: Links all managed dotfiles from this repo into the expected macOS locations under `$HOME` and app support folders. Existing nonmatching files are moved to `backups/<timestamp>/` before links are created.
+  - VS Code `sync/` and `globalStorage/` are intentionally ignored because VS Code writes generated state there.
+  - k9s is linked file-by-file so generated cluster state and logs stay outside the repo.
+- `scripts/archive/load-dotfiles.sh`: Legacy copy/load script kept for archive.
+- `scripts/archive/save-dotfiles.sh`: Legacy copy/save script kept for archive.
