@@ -34,6 +34,10 @@ DOTFILES=(
   "${HOME}/Library/Application Support/k9s/skins/skin.yaml:k9s/skins/skin.yaml"
 )
 
+LINK_DOTFILES=(
+  ".config/nvim"
+)
+
 # Function to get source and destination paths
 get_paths() {
   local entry="$1"
@@ -55,6 +59,39 @@ get_paths() {
   echo "$source_path:$REPO_DIR/$dest_path"
 }
 
+copy_path() {
+  local source_path="$1"
+  local dest_path="$2"
+
+  mkdir -p "$(dirname "$dest_path")"
+
+  if [ -d "$source_path" ]; then
+    mkdir -p "$dest_path"
+    rsync -a --delete "$source_path/" "$dest_path/"
+  else
+    cp "$source_path" "$dest_path"
+  fi
+}
+
+ensure_link() {
+  local source_path="$1"
+  local dest_path="$2"
+
+  if [ -L "$dest_path" ] && [ "$(readlink "$dest_path")" = "$source_path" ]; then
+    echo "Already linked $dest_path to $source_path"
+    return
+  fi
+
+  if [ -e "$dest_path" ] || [ -L "$dest_path" ]; then
+    echo "Removing existing $dest_path"
+    rm -rf "$dest_path"
+  fi
+
+  mkdir -p "$(dirname "$dest_path")"
+  echo "Linking $source_path to $dest_path"
+  ln -s "$source_path" "$dest_path"
+}
+
 # Copy each dotfile from source to repository
 for dotfile_entry in "${DOTFILES[@]}"; do
   paths=$(get_paths "$dotfile_entry")
@@ -62,15 +99,29 @@ for dotfile_entry in "${DOTFILES[@]}"; do
   dest_path="${paths#*:}"
 
   if [ -f "$source_path" ] || [ -d "$source_path" ]; then
-    # Create destination directory if it doesn't exist
-    dest_dir="$(dirname "$dest_path")"
-    mkdir -p "$dest_dir"
-
     echo "Copying $source_path to $dest_path"
-    cp -r "$source_path" "$dest_path"
+    copy_path "$source_path" "$dest_path"
   else
     echo "Warning: $source_path does not exist, skipping..."
   fi
+done
+
+for link_entry in "${LINK_DOTFILES[@]}"; do
+  source_path="$HOME/$link_entry"
+  dest_path="$REPO_DIR/$link_entry"
+
+  if [ ! -L "$source_path" ] || [ "$(readlink "$source_path")" != "$dest_path" ]; then
+    if [ -e "$source_path" ]; then
+      echo "Copying $source_path to $dest_path"
+      mkdir -p "$dest_path"
+      rsync -a --delete --exclude='.git' --exclude='.DS_Store' "$source_path/" "$dest_path/"
+    elif [ ! -e "$dest_path" ]; then
+      echo "Warning: $source_path does not exist, skipping..."
+      continue
+    fi
+  fi
+
+  ensure_link "$dest_path" "$source_path"
 done
 
 echo "Done! Dotfiles have been saved to the repository."
