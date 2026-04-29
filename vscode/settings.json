@@ -1,7 +1,7 @@
 {
   "github.copilot.nextEditSuggestions.enabled": true,
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
-  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.iconTheme": "catppuccin-mocha",
   "icontheme.darkIconTheme": "catppuccin-mocha",
   "icontheme.lightIconTheme": "catppuccin-latte",
   "editor.accessibilitySupport": "off",
@@ -388,7 +388,6 @@
   "terminal.integrated.initialHint": false,
   "ansible.lightspeed.enabled": false,
   "makefile.configureOnOpen": true,
-  "workbench.productIconTheme": "feather-vscode",
   "path-intellisense.autoSlashAfterDirectory": true,
   "path-intellisense.autoTriggerNextSuggestion": true,
   "[ansible]": {
@@ -441,4 +440,6 @@
   "[helm]": {
     "editor.formatOnSave": false,
   },
+  "chatgpt.followUpQueueMode": "queue",
+  "python.terminal.activateEnvironment": false,
 }
