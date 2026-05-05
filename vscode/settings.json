@@ -446,4 +446,6 @@
     "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "git.addAICoAuthor": "off",
+  "workbench.openInAgents.enabled": false,
+  "go.toolsManagement.autoUpdate": true,
 }
