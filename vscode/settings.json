@@ -448,4 +448,5 @@
   "git.addAICoAuthor": "off",
   "workbench.openInAgents.enabled": false,
   "go.toolsManagement.autoUpdate": true,
+  "githubPullRequests.allowFetch": false,
 }
