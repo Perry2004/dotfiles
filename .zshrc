@@ -217,3 +217,6 @@ export FZF_DEFAULT_OPTS="--height 80% --tmux center,80% --style full --style ful
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+
+# Include GNU Make's gnumake in PATH, so that `make` will use it instead of the default legacy make
+export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
