@@ -296,7 +296,6 @@
   },
   "terminal.integrated.scrollback": 20000,
   "terminal.integrated.persistentSessionScrollback": 500,
-  "terminal.integrated.tabs.enabled": false,
   "git.blame.editorDecoration.enabled": false,
   "python.analysis.autoFormatStrings": true,
   "python.analysis.completeFunctionParens": true,
@@ -456,4 +455,7 @@
   "go.inlayHints.ignoredError": true,
   "go.inlayHints.parameterNames": true,
   "go.inlayHints.rangeVariableTypes": true,
+  "terminal.integrated.enableImages": true,
+  "terminal.integrated.tabs.enabled": false,
+  "terminal.integrated.stickyScroll.enabled": false,
 }
