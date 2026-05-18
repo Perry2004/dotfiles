@@ -382,7 +382,6 @@
     "scminput": false,
   },
   "chat.viewSessions.orientation": "stacked",
-  "editor.formatOnSaveMode": "modificationsIfAvailable",
   "workbench.editor.showTabIndex": true,
   "terminal.integrated.initialHint": false,
   "ansible.lightspeed.enabled": false,
@@ -458,4 +457,8 @@
   "terminal.integrated.enableImages": true,
   "terminal.integrated.tabs.enabled": false,
   "terminal.integrated.stickyScroll.enabled": false,
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "[go]": {
+    "editor.formatOnSaveMode": "file",
+  },
 }
