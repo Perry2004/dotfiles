@@ -14,10 +14,10 @@ alt - k : yabai -m window --focus north
 alt - l : yabai -m window --focus east
 
 # -- FOCUS DISPLAYS
-alt + shift - h : yabai -m display --focus west
-alt + shift - k : yabai -m display --focus north
-alt + shift - j : yabai -m display --focus south
-alt + shift - l : yabai -m display --focus east
+shift + alt + ctrl - h : yabai -m display --focus west
+shift + alt + ctrl - k : yabai -m display --focus north
+shift + alt + ctrl - j : yabai -m display --focus south
+shift + alt + ctrl - l : yabai -m display --focus east
 
 # -- SWAP WINDOW POSITIONS --
 shift + alt - h : yabai -m window --swap west
