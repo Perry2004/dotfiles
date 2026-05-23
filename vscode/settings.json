@@ -1,7 +1,7 @@
 {
   "github.copilot.nextEditSuggestions.enabled": true,
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
-  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.iconTheme": "catppuccin-mocha",
   "icontheme.darkIconTheme": "catppuccin-mocha",
   "icontheme.lightIconTheme": "catppuccin-latte",
   "editor.accessibilitySupport": "off",
@@ -461,4 +461,5 @@
   "[go]": {
     "editor.formatOnSaveMode": "file",
   },
+  "scm.defaultViewMode": "tree",
 }
