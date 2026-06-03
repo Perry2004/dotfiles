@@ -220,3 +220,10 @@ source <(fzf --zsh)
 
 # Include GNU Make's gnumake in PATH, so that `make` will use it instead of the default legacy make
 export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
+
+# Auto-complete for make
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+zstyle ':completion:*:*:make:*:targets' call-command no
