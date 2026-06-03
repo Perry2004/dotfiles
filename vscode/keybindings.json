@@ -257,6 +257,22 @@
     "command": "nextCompressedFolder",
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus",
   },
+  {
+    "key": "shift+\\",
+    "command": "explorer.openToSide",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus && !explorerResourceIsFolder",
+  },
+  {
+    "key": "-",
+    "command": "runCommands",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus && !explorerResourceIsFolder",
+    "args": {
+      "commands": [
+        "explorer.openAndPassFocus",
+        "workbench.action.moveEditorToBelowGroup",
+      ],
+    },
+  },
   // Leader-based search commands (using Ctrl+F as prefix)
   {
     "key": "ctrl+f b",
