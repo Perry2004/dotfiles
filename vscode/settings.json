@@ -436,7 +436,8 @@
   },
   "editor.formatOnPaste": true,
   "[helm]": {
-    "editor.formatOnSave": false,
+    // "editor.formatOnSave": false,
+    "editor.defaultFormatter": "webfreak.advanced-local-formatters",
   },
   "chatgpt.followUpQueueMode": "queue",
   "python.terminal.activateEnvironment": false,
@@ -468,4 +469,10 @@
   "git.openRepositoryInParentFolders": "always",
   "go.lintTool": "golangci-lint",
   "go.lintFlags": ["--path-mode=abs", "--fast-only"],
+  "advancedLocalFormatters.formatters": [
+    {
+      "command": ["helmfmt"],
+      "languages": ["helm"],
+    },
+  ],
 }
