@@ -463,6 +463,9 @@
   "[go]": {
     "editor.formatOnSaveMode": "file",
   },
+  "[terraform]": {
+    "editor.formatOnSaveMode": "file",
+  },
   "scm.defaultViewMode": "tree",
   "explorer.incrementalNaming": "disabled",
   "todo-tree.ripgrep.ripgrep": "/opt/homebrew/bin/rg",
