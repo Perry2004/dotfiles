@@ -463,7 +463,7 @@
   "[go]": {
     "editor.formatOnSaveMode": "file",
   },
-  "[terraform]": {
+  "[terraform][terraform-vars]": {
     "editor.formatOnSaveMode": "file",
   },
   "scm.defaultViewMode": "tree",
