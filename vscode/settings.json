@@ -478,4 +478,5 @@
       "languages": ["helm"],
     },
   ],
+  "workbench.productIconTheme": "feather-vscode",
 }
