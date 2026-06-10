@@ -451,18 +451,15 @@
   {
     "key": "escape",
     "command": "closeParameterHints",
-    "when": "editorFocus && parameterHintsVisible && (!vim.active || vim.mode != 'Insert')"
+    "when": "editorFocus && parameterHintsVisible && (!vim.active || vim.mode != 'Insert')",
   },
   {
     "key": "escape",
     "command": "runCommands",
     "when": "editorTextFocus && vim.active && vim.mode == 'Insert' && parameterHintsVisible",
     "args": {
-      "commands": [
-        "closeParameterHints",
-        "extension.vim_escape"
-      ]
-    }
+      "commands": ["closeParameterHints", "extension.vim_escape"],
+    },
   },
   // Scroll hover panel
   {
@@ -623,5 +620,10 @@
     "key": "shift+tab",
     "command": "-extension.vim_shift+tab",
     "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'",
+  },
+  {
+    "key": "alt+cmd+k",
+    "command": "-claude-code.insertAtMentioned",
+    "when": "editorTextFocus",
   },
 ]
