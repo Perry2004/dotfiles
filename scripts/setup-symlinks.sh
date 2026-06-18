@@ -11,6 +11,7 @@ USED_BACKUP=0
 # Relative destinations are resolved from $HOME.
 LINKS=(
   ".zshrc|.zshrc"
+  ".zprofile|.zprofile"
   ".tmux.conf|.tmux.conf"
   ".vimrc|.vimrc"
   ".gitconfig|.gitconfig"
