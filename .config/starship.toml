@@ -6,14 +6,22 @@ $directory\
 [](fg:#769ff0 bg:#394260)\
 $git_branch\
 $git_status\
-[](fg:#394260 bg:#212736)\
-$nodejs\
-$rust\
-$golang\
-$php\
-[](fg:#212736 bg:#1d2230)\
 $time\
-[ ](fg:#1d2230)\
+[ ](fg:#394260)\
+\n[░▒▓](#394260)\
+[  ](bg:#394260 fg:#9eceff)\
+[](fg:#394260 bg:#2f3b5c)\
+$nodejs\
+$python\
+$java\
+$golang\
+$terraform\
+$docker_context\
+$kubernetes\
+$cmd_duration\
+$jobs\
+$status\
+[ ](fg:#2f3b5c)\
 \n$character"""
 
 [directory]
@@ -39,26 +47,59 @@ format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "bg:#2f3b5c"
+format = '[[ $symbol ($version) ](fg:#c0caf5 bg:#2f3b5c)]($style)'
 
-[rust]
-symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+[python]
+symbol = ""
+style = "bg:#2f3b5c"
+format = '[[ $symbol ($version) ](fg:#c0caf5 bg:#2f3b5c)]($style)'
+
+[java]
+symbol = ""
+style = "bg:#2f3b5c"
+format = '[[ $symbol ($version) ](fg:#c0caf5 bg:#2f3b5c)]($style)'
 
 [golang]
-symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+symbol = "󰟓"
+style = "bg:#2f3b5c"
+format = '[[ $symbol ($version) ](fg:#c0caf5 bg:#2f3b5c)]($style)'
 
-[php]
-symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+[terraform]
+symbol = "󱁢"
+style = "bg:#2f3b5c"
+format = '[[ $symbol $workspace ](fg:#c0caf5 bg:#2f3b5c)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:#2f3b5c"
+format = '[[ $symbol $context ](fg:#c0caf5 bg:#2f3b5c)]($style)'
+
+[kubernetes]
+disabled = false
+symbol = "󱃾"
+style = "bg:#2f3b5c"
+format = '[[ $symbol $context( \($namespace\)) ](fg:#c0caf5 bg:#2f3b5c)]($style)'
+
+[cmd_duration]
+min_time = 2000
+style = "bg:#2f3b5c"
+format = '[[  $duration ](fg:#c0caf5 bg:#2f3b5c)]($style)'
+
+[jobs]
+symbol = ""
+style = "bg:#2f3b5c"
+format = '[[ $symbol $number ](fg:#c0caf5 bg:#2f3b5c)]($style)'
+
+[status]
+disabled = false
+symbol = "[✘](fg:#ff9eaf bg:#2f3b5c)"
+success_symbol = "[✔](fg:#9ece6a bg:#2f3b5c)"
+style = "bg:#2f3b5c"
+format = '[[ $symbol $status ](fg:#c0caf5 bg:#2f3b5c)]($style)'
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#1d2230"
-format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+style = "bg:#394260"
+format = '[[  $time ](fg:#c0caf5 bg:#394260)]($style)'
