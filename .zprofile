@@ -1,10 +1,36 @@
+# Fix incomplete PATH on first terminal boot (loads /usr/sbin, /sbin, etc.)
+if [[ -x /usr/libexec/path_helper ]] && [[ ":$PATH:" != *":/usr/sbin:"* ]]; then
+  eval "$(/usr/libexec/path_helper -s)"
+fi
 
-# Created by `pipx` on 2025-09-15 03:33:59
-export PATH="$PATH:/Users/perryzhu/.local/bin"
+# Initialize Homebrew for login shells.
+if [[ -x /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
-# Added by OrbStack: command-line tools and integration
-# This won't be added again if you remove it.
-source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+# User-local executables.
+path=("$HOME/.local/bin" ${path:#"$HOME/.local/bin"})
+export PATH
 
-# Added by Antigravity CLI installer
-export PATH="/Users/perryzhu/.local/bin:$PATH"
+# Include GNU Make's gnumake in PATH, so `make` uses it instead of macOS make.
+gnumake_path="/opt/homebrew/opt/make/libexec/gnubin"
+if [[ -d "$gnumake_path" ]]; then
+  path=("$gnumake_path" ${path:#"$gnumake_path"})
+  export PATH
+fi
+unset gnumake_path
+
+# OrbStack command-line tools and integration.
+if [[ -r "$HOME/.orbstack/shell/init.zsh" ]]; then
+  source "$HOME/.orbstack/shell/init.zsh"
+fi
+
+# Preferred editor for local and remote sessions.
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
+
+# Compilation flags.
+export ARCHFLAGS="-arch $(uname -m)"
