@@ -377,9 +377,6 @@
   "terminal.integrated.suggest.enabled": false,
   "github.copilot.enable": {
     "*": true,
-    "plaintext": true,
-    "markdown": true,
-    "scminput": false,
   },
   "chat.viewSessions.orientation": "stacked",
   "workbench.editor.showTabIndex": true,
@@ -407,15 +404,7 @@
   "diffEditor.codeLens": true,
   "errorLens.codeLensEnabled": true,
   "json.schemaDownload.trustedDomains": {
-    "https://schemastore.azurewebsites.net/": true,
-    "https://raw.githubusercontent.com/microsoft/vscode/": true,
-    "https://raw.githubusercontent.com/devcontainers/spec/": true,
-    "https://www.schemastore.org/": true,
-    "https://json.schemastore.org/": true,
-    "https://json-schema.org/": true,
-    "https://developer.microsoft.com/json-schemas/": true,
     "*": true,
-    "https://biomejs.dev": true,
   },
   "editor.codeActionsOnSave": {
     "source.organizeImports.biome": "explicit",
@@ -477,6 +466,6 @@
     },
   ],
   "workbench.productIconTheme": "feather-vscode",
-  "window.commandCenter": false,
   "testing.coverageToolbarEnabled": true,
+  "window.commandCenter": false,
 }
