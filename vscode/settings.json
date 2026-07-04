@@ -1,7 +1,7 @@
 {
   "github.copilot.nextEditSuggestions.enabled": true,
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
-  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.iconTheme": "catppuccin-mocha",
   "icontheme.darkIconTheme": "catppuccin-mocha",
   "icontheme.lightIconTheme": "catppuccin-latte",
   "editor.accessibilitySupport": "off",
@@ -375,9 +375,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "terminal.integrated.suggest.enabled": false,
-  "github.copilot.enable": {
-    "*": true,
-  },
   "chat.viewSessions.orientation": "stacked",
   "workbench.editor.showTabIndex": true,
   "terminal.integrated.initialHint": false,
@@ -468,4 +465,11 @@
   "workbench.productIconTheme": "feather-vscode",
   "testing.coverageToolbarEnabled": true,
   "window.commandCenter": false,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": true,
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
 }
