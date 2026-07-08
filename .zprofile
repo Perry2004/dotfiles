@@ -26,6 +26,3 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='nvim'
 fi
-
-# Compilation flags.
-export ARCHFLAGS="-arch $(uname -m)"
