@@ -197,10 +197,10 @@ function y() {
 
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"
-	local status=$?
-	if [[ "$status" -ne 0 ]]; then
+	local y_status=$?
+	if [[ "$y_status" -ne 0 ]]; then
 		rm -f -- "$tmp"
-		return "$status"
+		return "$y_status"
 	fi
 
 	IFS= read -r -d '' cwd < "$tmp"
