@@ -190,22 +190,11 @@ fi
 
 # yazi shell wrapper
 function y() {
-	if ! command -v yazi >/dev/null 2>&1; then
-		echo "yazi: command not found" >&2
-		return 127
-	fi
-
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"
-	local y_status=$?
-	if [[ "$y_status" -ne 0 ]]; then
-		rm -f -- "$tmp"
-		return "$y_status"
-	fi
-
 	IFS= read -r -d '' cwd < "$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	command rm -f -- "$tmp"
 }
 
 # zoxide
