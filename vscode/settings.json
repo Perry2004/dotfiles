@@ -294,8 +294,8 @@
   "[csv]": {
     "editor.inlayHints.maximumLength": 0,
   },
-  "terminal.integrated.scrollback": 20000,
-  "terminal.integrated.persistentSessionScrollback": 500,
+  "terminal.integrated.scrollback": 50000,
+  "terminal.integrated.persistentSessionScrollback": 1000,
   "git.blame.editorDecoration.enabled": false,
   "python.analysis.autoFormatStrings": true,
   "python.analysis.completeFunctionParens": true,
