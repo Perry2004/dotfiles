@@ -15,11 +15,6 @@ if [[ -d "$gnumake_path" ]]; then
 fi
 unset gnumake_path
 
-# OrbStack command-line tools and integration.
-if [[ -r "$HOME/.orbstack/shell/init.zsh" ]]; then
-  source "$HOME/.orbstack/shell/init.zsh"
-fi
-
 # Preferred editor for local and remote sessions.
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
