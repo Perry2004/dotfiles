@@ -23,6 +23,7 @@ LINKS=(
   ".config/nvim|.config/nvim"
   ".config/starship.toml|.config/starship.toml"
   ".config/yazi/yazi.toml|.config/yazi/yazi.toml"
+  ".config/lazygit/config.yml|Library/Application Support/lazygit/config.yml"
   ".config/gh/config.yml|.config/gh/config.yml"
   "ghostty-config|.config/ghostty/config"
   "iterm2/com.googlecode.iterm2.plist|Library/Application Support/iTerm2/com.googlecode.iterm2.plist"
