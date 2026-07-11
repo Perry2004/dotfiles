@@ -93,6 +93,31 @@ link_path() {
   echo "Linked $dest_path -> $source_path"
 }
 
+link_firefox_userchrome() {
+  local profiles_ini="$HOME/Library/Application Support/Firefox/profiles.ini"
+  local profile_rel
+
+  if [[ ! -f "$profiles_ini" ]]; then
+    echo "Warning: Firefox profiles.ini not found, skipping userChrome.css..."
+    return
+  fi
+
+  profile_rel="$(awk -F= '
+    /^\[Install/ { in_install = 1; next }
+    /^\[/ { in_install = 0 }
+    in_install && $1 == "Default" { print $2; exit }
+  ' "$profiles_ini")"
+
+  if [[ -z "$profile_rel" ]]; then
+    echo "Warning: Firefox default profile not found, skipping userChrome.css..."
+    return
+  fi
+
+  link_path \
+    "$REPO_DIR/firefox/userChrome.css" \
+    "$HOME/Library/Application Support/Firefox/$profile_rel/chrome/userChrome.css"
+}
+
 echo "Setting up dotfile symlinks from $REPO_DIR"
 
 remove_legacy_link "$REPO_DIR/vscode" "$(dest_path_for "Library/Application Support/Code/User")"
@@ -102,6 +127,8 @@ for entry in "${LINKS[@]}"; do
   IFS='|' read -r source_rel dest_rel <<< "$entry"
   link_path "$REPO_DIR/$source_rel" "$(dest_path_for "$dest_rel")"
 done
+
+link_firefox_userchrome
 
 if [[ "$USED_BACKUP" -eq 1 ]]; then
   echo "Existing files were backed up under $BACKUP_DIR"

@@ -36,6 +36,8 @@
 ├── .zshrc # zsh configuration with oh-my-zsh.
 ├── README.md
 ├── ghostty-config # Ghostty terminal settings with tmux integration.
+├── firefox
+│   └── userChrome.css # Firefox UI tweaks; hides extension-page labels.
 ├── iterm2
 │   └── com.googlecode.iterm2.plist # iTerm2 exported config backup.
 ├── k9s
@@ -58,5 +60,6 @@
 - `scripts/setup-symlinks.sh`: Links all managed dotfiles from this repo into the expected macOS locations under `$HOME` and app support folders. Existing nonmatching files are moved to `backups/<timestamp>/` before links are created.
   - VS Code `sync/` and `globalStorage/` are intentionally ignored because VS Code writes generated state there.
   - k9s is linked file-by-file so generated cluster state and logs stay outside the repo.
+  - Firefox's active default profile is detected from `profiles.ini` before `firefox/userChrome.css` is linked.
 - `scripts/archive/load-dotfiles.sh`: Legacy copy/load script kept for archive.
 - `scripts/archive/save-dotfiles.sh`: Legacy copy/save script kept for archive.

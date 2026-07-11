@@ -1,0 +1,10 @@
+/* Hide the "Extension (name)" label while keeping the extension icon. */
+#identity-box.extensionPage #identity-icon-label,
+#identity-box.extensionPage #identity-icon-labels {
+  display: none !important;
+}
+
+/* Hide the bookmark star in the address bar. */
+#star-button-box {
+  display: none !important;
+}
