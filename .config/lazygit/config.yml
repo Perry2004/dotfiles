@@ -2,3 +2,6 @@ git:
   pagers:
     - colorArg: always
       pager: delta --paging=never --syntax-theme base16-256 -s
+keybinding:
+  universal:
+    confirmInEditor: <ctrl+s>

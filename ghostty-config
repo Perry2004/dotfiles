@@ -39,4 +39,3 @@ link-previews = true
 title = ""
 
 keybind = global:cmd+backquote=toggle_quick_terminal
-keybind = super+enter=text:\x13
