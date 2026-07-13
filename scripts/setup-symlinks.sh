@@ -25,6 +25,7 @@ LINKS=(
   ".config/yazi/yazi.toml|.config/yazi/yazi.toml"
   ".config/lazygit/config.yml|Library/Application Support/lazygit/config.yml"
   ".config/gh/config.yml|.config/gh/config.yml"
+  ".config/fastfetch/config.jsonc|.config/fastfetch/config.jsonc"
   "ghostty-config|.config/ghostty/config"
   "iterm2/com.googlecode.iterm2.plist|Library/Application Support/iTerm2/com.googlecode.iterm2.plist"
   "vscode/settings.json|Library/Application Support/Code/User/settings.json"
