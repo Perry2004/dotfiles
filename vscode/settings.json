@@ -154,6 +154,10 @@
       "commands": ["workbench.action.splitEditorDown"],
     },
     {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"],
+    },
+    {
       "before": ["j"],
       "after": ["g", "j"],
     },
@@ -484,4 +488,6 @@
   "[dynamic csv]": {
     "editor.inlayHints.maximumLength": 0,
   },
+  "chat.titleBar.openInAgentsWindow.enabled": false,
+  "comments.openView": "never",
 }
