@@ -21,7 +21,7 @@
 [credential "https://gist.github.com"]
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [user]
-	name = pyz_oo
+	name = Perry Z.
 	email = perryzhu2004@outlook.com
 [fetch]
 	prune = true
