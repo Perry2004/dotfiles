@@ -119,9 +119,36 @@ function cdl() {
 }
 
 function gitclean() {
-    git switch $(git_main_branch)
+    local main_branch branch upstream_remote upstream_track remote
+    local -a remotes_to_remove
+    local -A branches_to_delete
+
+    main_branch="$(git_main_branch)" || return
+    git switch "$main_branch" || return
     git pull -p
-    git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
+
+    while IFS= read -r remote; do
+        [[ "$remote" == "origin" ]] || remotes_to_remove+=("$remote")
+    done < <(git remote)
+
+    while read -r branch upstream_remote; do
+        for remote in "${remotes_to_remove[@]}"; do
+            if [[ "$upstream_remote" == "$remote" ]]; then
+                branches_to_delete[$branch]=1
+                break
+            fi
+        done
+    done < <(git for-each-ref --format='%(refname:short) %(upstream:remotename)' refs/heads)
+
+    while read -r branch upstream_track; do
+        [[ "$upstream_track" == "[gone]" ]] && branches_to_delete[$branch]=1
+    done < <(git for-each-ref --format='%(refname:short) %(upstream:track)' refs/heads)
+
+    (( ${#branches_to_delete} )) && git branch -D -- "${(@k)branches_to_delete}"
+
+    for remote in "${remotes_to_remove[@]}"; do
+        git remote remove "$remote"
+    done
 }
 
 
