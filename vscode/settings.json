@@ -1,7 +1,7 @@
 {
   "github.copilot.nextEditSuggestions.enabled": true,
   "workbench.preferredLightColorTheme": "Tokyo Night Light",
-  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.iconTheme": "catppuccin-mocha",
   "icontheme.darkIconTheme": "catppuccin-mocha",
   "icontheme.lightIconTheme": "catppuccin-latte",
   "editor.accessibilitySupport": "off",
@@ -245,8 +245,6 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.renderWhitespace": "boundary",
   "editor.trimWhitespaceOnDelete": true,
-  "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilotcli:",
   "powermode.enabled": true,
   "powermode.shake.enabled": false,
   "powermode.combo.location": "off",
@@ -414,7 +412,6 @@
   "todo-tree.highlights.enabled": false,
   "biome.suggestInstallingGlobally": false,
   "claudeCode.preferredLocation": "panel",
-  "claudeCode.allowDangerouslySkipPermissions": true,
   "files.trimTrailingWhitespace": true,
   "workbench.editor.useModal": "off",
   "editor.formatOnSave": true,
@@ -490,4 +487,7 @@
   },
   "chat.titleBar.openInAgentsWindow.enabled": false,
   "comments.openView": "never",
+  "claudeCode.enableNewConversationShortcut": true,
+  "claudeCode.allowDangerouslySkipPermissions": true,
+  "workbench.experimental.modernUI": false,
 }
