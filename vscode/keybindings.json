@@ -626,4 +626,33 @@
     "command": "-claude-code.insertAtMentioned",
     "when": "editorTextFocus",
   },
+  {
+    "key": "cmd+r",
+    "command": "-jupyter.refreshDataViewer",
+    "when": "isWorkspaceTrusted && jupyter.dataViewerActive",
+  },
+  {
+    "key": "cmd+r",
+    "command": "notebook.execute",
+    "when": "notebookEditorFocused",
+  },
+  {
+    "key": "cmd+l",
+    "command": "notebook.clearAllCellsOutputs",
+    "when": "notebookEditorFocused",
+  },
+  {
+    "key": "cmd+u",
+    "command": "-cursorUndo",
+    "when": "textInputFocus",
+  },
+  {
+    "key": "cmd+u",
+    "command": "notebook.revealRunningCell",
+    "when": "notebookEditorFocused",
+  },
+  {
+    "key": "ctrl+cmd+u",
+    "command": "notebook.revealLastFailedCell",
+  },
 ]
