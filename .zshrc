@@ -99,11 +99,9 @@ fi
 
 icloud="${HOME}/Library/Mobile Documents/com~apple~CloudDocs"
 files="${icloud}/Files"
-term="${files}/UBC/2024WT2"
+term="${files}/UBC/2026WT1"
 codes="${files}/Codes"
-books="${HOME}/Library/Mobile Documents/iCloud~com~apple~iBooks/Documents"
 notes="${HOME}/Library/Mobile Documents/iCloud~md~obsidian/Documents/Notes.md"
-plai="${files}/PLAI"
 
 # aliases
 alias lg='lazygit'
