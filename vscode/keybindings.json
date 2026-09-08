@@ -637,11 +637,6 @@
     "when": "notebookEditorFocused",
   },
   {
-    "key": "cmd+l",
-    "command": "notebook.clearAllCellsOutputs",
-    "when": "notebookEditorFocused",
-  },
-  {
     "key": "cmd+u",
     "command": "-cursorUndo",
     "when": "textInputFocus",
@@ -654,5 +649,10 @@
   {
     "key": "ctrl+cmd+u",
     "command": "notebook.revealLastFailedCell",
+  },
+  {
+    "key": "ctrl+l",
+    "command": "-notebook.centerActiveCell",
+    "when": "notebookEditorFocused",
   },
 ]

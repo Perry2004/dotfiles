@@ -490,4 +490,6 @@
   "claudeCode.enableNewConversationShortcut": true,
   "claudeCode.allowDangerouslySkipPermissions": true,
   "workbench.experimental.modernUI": false,
+  "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
+  "python.analysis.enableEditableInstalls": false,
 }
