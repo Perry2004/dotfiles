@@ -554,6 +554,11 @@
   },
   {
     "key": "escape",
+    "command": "notebook.cell.quitEdit",
+    "when": "inputFocus && notebookEditorFocused && vim.active && vim.mode == 'Normal' && !editorHasSelection && !editorHoverVisible",
+  },
+  {
+    "key": "escape",
     "command": "hideSuggestWidget",
     "when": "vim.active && vim.mode == 'Normal' && suggestWidgetVisible && textInputFocus",
   },
@@ -654,5 +659,11 @@
     "key": "ctrl+l",
     "command": "-notebook.centerActiveCell",
     "when": "notebookEditorFocused",
+  },
+  // Run notebook code cells through the notebook kernel.
+  {
+    "key": "cmd+enter",
+    "command": "notebook.cell.execute",
+    "when": "notebookEditorFocused && notebookCellType == 'code' && !notebookOutputFocused",
   },
 ]
