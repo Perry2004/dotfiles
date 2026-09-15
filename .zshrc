@@ -100,7 +100,7 @@ fi
 icloud="${HOME}/Library/Mobile Documents/com~apple~CloudDocs"
 files="${icloud}/Files"
 term="${files}/UBC/2026WT1"
-codes="${files}/Codes"
+codes="${HOME}/Documents/Codes"
 notes="${HOME}/Library/Mobile Documents/iCloud~md~obsidian/Documents/Notes.md"
 
 # aliases
