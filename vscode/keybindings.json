@@ -666,4 +666,9 @@
     "command": "notebook.cell.execute",
     "when": "notebookEditorFocused && notebookCellType == 'code' && !notebookOutputFocused",
   },
+  {
+    "key": "cmd+alt+enter",
+    "command": "jupyter.notebookeditor.addcellbelow",
+    "when": "notebookEditorFocused && notebookEditable && !notebookOutputFocused",
+  },
 ]
