@@ -161,11 +161,6 @@ if [[ -d "$asdf_shims" ]]; then
 fi
 unset asdf_shims
 
-# asdf go plugins
-asdf_go_env="${ASDF_DATA_DIR:-$HOME/.asdf}/plugins/golang/set-env.zsh"
-[[ -r "$asdf_go_env" ]] && source "$asdf_go_env"
-unset asdf_go_env
-
 # yarn path
 if [[ -d "${HOME}/.yarn/bin" ]]; then
   path=("${HOME}/.yarn/bin" ${path:#"${HOME}/.yarn/bin"})
@@ -234,6 +229,9 @@ export FZF_DEFAULT_OPTS="--height 80% --tmux center,80% --style full --style ful
 if command -v fzf >/dev/null 2>&1 && [[ -t 0 && -t 1 && "$TERM" != "dumb" ]]; then
   source <(fzf --zsh)
 fi
+
+# elevate native Go installation
+export PATH="/usr/local/go/bin:$PATH"
 
 # Auto-complete for make
 zstyle ':completion:*' use-cache on
