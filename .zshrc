@@ -225,9 +225,6 @@ if command -v fzf >/dev/null 2>&1 && [[ -t 0 && -t 1 && "$TERM" != "dumb" ]]; th
   source <(fzf --zsh)
 fi
 
-# elevate native Go installation
-export PATH="/usr/local/go/bin:$PATH"
-
 # Auto-complete for make
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
