@@ -671,4 +671,9 @@
     "command": "jupyter.notebookeditor.addcellbelow",
     "when": "notebookEditorFocused && notebookEditable && !notebookOutputFocused",
   },
+  {
+    "key": "alt+cmd+b",
+    "command": "-r.runFromBeginningToLine",
+    "when": "editorTextFocus && editorLangId == 'r'",
+  },
 ]
