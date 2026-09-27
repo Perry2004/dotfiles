@@ -3,6 +3,8 @@
 ``` sh
 .
 ├── .config
+│   ├── mise
+│   │   └── config.toml
 │   ├── nvim # Neovim/LazyVim config linked to ~/.config/nvim.
 │   │   ├── .neoconf.json # neoconf workspace settings.
 │   │   ├── init.lua

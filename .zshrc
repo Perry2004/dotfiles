@@ -153,13 +153,8 @@ function gitclean() {
 # iterm2 shell integration
 [[ -r "${HOME}/.iterm2_shell_integration.zsh" ]] && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# asdf runtime management
-asdf_shims="${ASDF_DATA_DIR:-$HOME/.asdf}/shims"
-if [[ -d "$asdf_shims" ]]; then
-  path=("$asdf_shims" ${path:#"$asdf_shims"})
-  export PATH
-fi
-unset asdf_shims
+# mise runtime management
+eval "$(mise activate zsh)"
 
 # yarn path
 if [[ -d "${HOME}/.yarn/bin" ]]; then
