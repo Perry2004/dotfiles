@@ -495,4 +495,5 @@
   "[r]": {
     "editor.codeLens": false,
   },
+  "githubPullRequests.pullBranch": "never",
 }
