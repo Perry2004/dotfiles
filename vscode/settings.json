@@ -496,4 +496,16 @@
     "editor.codeLens": false,
   },
   "githubPullRequests.pullBranch": "never",
+  "editor.tokenColorCustomizations": {
+    "[Tokyo Night Light]": {
+      "textMateRules": [
+        {
+          "scope": "markup.table.markdown",
+          "settings": {
+            "foreground": "#414d7c",
+          },
+        },
+      ],
+    },
+  },
 }
