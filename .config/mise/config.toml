@@ -1,6 +1,6 @@
 [tools]
 java = "graalvm-community-21.0.2"
-node = "24.11.0"
+node = "24.22.1"
 r = "4.6.1"
 
 [plugins]
