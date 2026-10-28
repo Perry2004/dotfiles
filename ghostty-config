@@ -7,7 +7,7 @@ background-opacity = 1
 background-opacity-cells = true
 theme = light: TokyoNight Day, dark: TokyoNight Storm
 
-initial-command = "/opt/homebrew/bin/tmux new-session -A -s main"
+command = "/opt/homebrew/bin/tmux new-session -A -s main"
 
 bell-features = system, audio, attention, title, no-border
 
