@@ -9,7 +9,7 @@ theme = light: TokyoNight Day, dark: TokyoNight Storm
 
 command = "/opt/homebrew/bin/tmux new-session -A -s main"
 
-bell-features = system, audio, attention, title, no-border
+bell-features = system, audio, no-attention, title, no-border
 
 macos-titlebar-style = tabs
 
